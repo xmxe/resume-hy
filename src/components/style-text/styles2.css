@@ -1,0 +1,72 @@
+
+/**
+ * 文本可以做一些适当调整。
+ */
+li,.md > p{
+  font-size: 1.3em;
+}
+.md{
+  font-family: '楷体';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+blockquote {
+  margin: 0.1rem 0px;
+  border-left: 4px solid #dfe2e5;
+  padding: 0 1px;
+  color: #a69f9f;
+  font-size: 1.3em;
+}
+
+a{
+  color: #64D5EA;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/**
+ * 还差最后一点就结束了。
+ */
+
+pre:hover{
+  box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
+}
+
+/**
+ *
+ * 如果你觉得我还不错，可以与我联系~
+ */
+
+
