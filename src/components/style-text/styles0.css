@@ -1,22 +1,18 @@
 /**
- *
  * 你好。我叫xmxe。想找一份高级java工程师或架构师的工作。
  * 我喜欢研究一些有趣的技术，这个就是从https://github.com/ustbhuangyi/resume fork而来
- * 
  */
 
 /**
- * 
  * 那么开始吧
  * 首先让一切都动起来~
  */
 
 * {
-  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 /**
- *
  * 黑白配色太无聊了，我们来做一些变化。
  */
 
@@ -24,19 +20,18 @@ html {
   background: rgb(63, 82, 99);
 }
 
-/***
+/**
  * 等等。
  */
 
-pre, a {
-  color: white;
+pre,a {
+  color: #d5cece;
 }
 
 /**
  * 看上去好多了。但是有点刺眼了。
  *
  * 而且在整个屏幕上写代码有点浪费空间了。
- *
  */
 
 pre:not(:empty) {
@@ -48,17 +43,18 @@ pre:not(:empty) {
   font-size: 14px;
   font-family: monospace;
   padding: 10px 10px 20px;
-  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
   white-space: pre-wrap;
   outline: 0;
 }
 
 /**
+ *
  * 接下来我们在把它移到屏幕右侧。
  */
 
 #style-text {
-  -webkit-transform: translateX(95%);
+  transform: translateX(95%);
   position: absolute;
 }
 
@@ -68,12 +64,25 @@ pre:not(:empty) {
  * 那么，我们来把代码变的更加可读吧~
  */
 
-.comment       { color: #857F6B; font-style: italic; }
-.selector      { color: #E69F0F; }
-.selector .key { color: #64D5EA; }
-.key           { color: #64D5EA; }
-.value         { color: #BE84F2; }
-.value.px      { color: #F92772; }
+.comment {
+  color: #857f6b;
+  font-style: italic;
+}
+.selector {
+  color: #e69f0f;
+}
+.selector .key {
+  color: #64d5ea;
+}
+.key {
+  color: #64d5ea;
+}
+.value {
+  color: #be84f2;
+}
+.value.px {
+  color: #f92772;
+}
 
 /**
  * 现在我们有了一些进展。
@@ -82,21 +91,21 @@ pre:not(:empty) {
  */
 
 body {
-  -webkit-perspective: 1000px;
+  perspective: 1000px;
 }
 
 #style-text {
-  -webkit-transform: translateX(98.5%) rotateY(-10deg);
-  -webkit-transform-origin: right;
+  transform: translateX(98.5%) rotateY(-10deg);
+  transform-origin: right;
   max-height: 94.5%;
 }
 
 /**
+ *
  * 好吧差不多了，接下来就聊聊我吧。
  */
 
 pre:not(#style-text) {
-  -webkit-transform: rotateY(10deg);
-  -webkit-transform-origin: left;
+  transform: rotateY(10deg);
+  transform-origin: left;
 }
-

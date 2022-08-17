@@ -14,7 +14,7 @@
 <script>
   const STATE_RUNNING = 0
   const STATE_PAUSED = 1
-  const pauseText = ['暂停 ||', '继续 >>']
+  const pauseText = ['暂停||', '继续>>']
 
   export default {
     name: 'v-footer',
