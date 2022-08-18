@@ -16,9 +16,15 @@ img {
   content:url(static/avatar.png);
 }
 
+/**
+ * 接着修改下字体
+ *
+ */
+
 li,.md > p {
   font-size: 1.3em;
 }
+
 .md {
   font-family: "楷体";
 }

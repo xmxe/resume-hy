@@ -11,7 +11,7 @@ export const writeMixin = {
   data() {
     return {
       text: '',
-      speed: debug ? 0 : 30
+      speed: debug ? 0 : 35
     }
   },
   created() {
