@@ -1,7 +1,6 @@
 /**
- * 可以使用marked 或者 Markdown库来使markdown转换为html
  * 
- * 左侧的 markdown 看起来并不美观。
+ * 左侧的markdown看起来并不直观。
  *
  * 我们稍作修饰。
  */
@@ -20,6 +19,7 @@
 }
 
 /**
+ * 可以使用npm库marked来使markdown转换为html
  * 
  * 下面就是见证奇迹的时刻：
  */
