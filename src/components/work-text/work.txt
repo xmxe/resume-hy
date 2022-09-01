@@ -17,15 +17,15 @@
 
 ###### 职责
 
-- 采集各电厂天气预报数据，通过HttpClient+JSoup对中央气象网历史天气、未来天气的数据进行抓取，将结果生成excel。
-- 采用Nginx+Keepalived搭建HA服务，Nginx负责应用的反向代理、负载均衡、跨域协作，Keepalived对Nginx进行心跳检测，使用主从架构保证服务的稳定运行。
-- 搭建持续集成服务Jenkins，编写Ant脚本对项目进行编译、打包，优化部署流程，提高部署效率。
+- 采集各电厂天气预报数据，使用HttpClient+JSoup对中央气象网历史天气、未来天气的数据进行抓取，将结果生成excel。
+- 采用Nginx+Keepalived搭建HA服务，Nginx实现了应用的反向代理、负载均衡、跨域协作，Keepalived对Nginx进行心跳检测，使用主从架构保证了服务的稳定运行。
+- 搭建持续集成服务Jenkins，编写Ant脚本对项目进行编译、打包，优化了部署流程，提高了部署效率。
 - 基于Dubbo进行调控云接口服务端的开发，调控云提供注册方式，编写业务接口后将接口以服务的方式注册到调控云集群供客户端调用。
 - 运维大数据集群部分调度任务，主要是将PMU的数据写入到Kafka并启动Spark任务。
 - 在调度系统中增加Java调用Python的功能(Runtime库)，后期使用开源调度框架XXL-JOB来运行部分调度任务及Python算法。
 - 由于实时数据库接口没有提供Python版本SDK，增加Python调用Java功能(Jpype库)。
 - 后台相关子系统Restful接口及前端页面的开发。
-- 协助其他团队，与开发团队成员一起负责不同项目的设计、编码、单元测试等工作。
+- 参与其他项目，协助其他团队，与团队成员一起负责不同项目的设计、编码、单元测试等工作。
 - 技术文档的编写以及维护，定期Review团队代码，参与需求分析、概要设计、文档编写、项目实施、系统维护等工作。
 
 ##### 山东中住地产经纪有限公司(2016.8~2018.10)
@@ -37,9 +37,10 @@
 ###### 职责
 
 - 针对数据库进行了架构改造，使用MyCat中间件实现MySQL的读写分离。
-- 结合Nginx搭建分布式文件系统FastDFS，并提供上传下载接口。
-- 针对静态页面重复开发的问题采用FreeMarker模板引擎生成HTML。
-- Linux操作系统的运行维护工作，编写简单的shell脚本供java任务的自启动。
+- 结合Nginx搭建分布式文件系统FastDFS，并提供上传下载接口，解决了服务器大容量存储和负载均衡的问题。
+- 针对静态页面重复开发的问题采用FreeMarker模板引擎生成HTML，提高了整体的开发效率。
+- 使用WebSocket进行用户管理，当相同用户同时登陆时服务端主动推送消息实现多余用户的登出。
+- 进行Linux操作系统的运行维护工作，编写简单的shell脚本供java任务的自启动。
 - 针对线上频繁FullGC、CPU负载过高进行问题排查，并对Tomcat的JVM参数调优。
 - 对济房网App等产品提供整体开发及组内外管理协调工作，并提供APP后台接口服务。
 - 参与软件项目的需求分析、设计、开发及测试等阶段。
@@ -63,7 +64,7 @@
 
 #### 开源项目
 
-- [jwt](https://github.com/xmxe/jwt)：使用JWT替代Cookie及Session，结合Spring Security实现鉴别、授权。
+- [jwt](https://github.com/xmxe/jwt)：使用JWT替代Cookie及Session认证，结合Spring Security实现鉴别、授权。
 - [oauth2](https://github.com/xmxe/oauth2)：第三方授权登录，如使用GitHub账号登录第三方网站。
 - [springboot](https://github.com/xmxe/springboot)：将主流技术集成到Spring Boot，如Sa-Token,Shiro,CAS单点登陆,Jasypt,Sharding-jdbc,WebSocket等。
 - [springcloud](https://github.com/xmxe/springcloud)：测试主流微服务组件及新生组件，如Apache ShenYu,Spring Cloud Netflix, Spring Cloud Alibaba,Spring Cloud Tencent等。
@@ -73,8 +74,8 @@
 #### 专业技能
 
 - 有着扎实的Java编程基础，熟悉JAVAEE相关技术，能够掌握面向对象的编程及开发。
-- 熟悉HTML、CSS、JavaScript等前端技术，了解主流框架如Node。
-- 掌握Oracle、MySQL、SQL Server等关系型数据库，能够灵活运用SQL进行数据的增删查改及调优。了解主流开源NoSQL系统如MongoDB，ElasticSearch等。
+- 熟悉HTML、CSS、JavaScript等前端技术，了解主流框架如NodeJS。
+- 掌握Oracle、MySQL、SQL Server等关系型数据库，能够灵活运用SQL进行数据的增删查改及调优，了解主流开源NoSQL系统如MongoDB，ElasticSearch等。
 - 熟练使用Spring、SpringMVC、Spring Boot、Spring Cloud等框架进行集成开发。
 - 熟练使用Eclipse、IntelliJ IDEA、VS Code等IDE，熟悉Tomcat、Jetty中间件，熟练使用Git、SVN等版本控制工具。
 - 熟悉Linux操作系统及常用命令，可以编写简单的Shell脚本。
