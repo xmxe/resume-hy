@@ -1,7 +1,7 @@
 <template>
   <footer>
     <a href="#" v-show="!isEnd" @click.prevent="togglePause">{{ text }}</a>
-    <a href="#" v-show="!isEnd" @click.prevent="skip">跳过动画 --></a>
+    <a href="#" v-show="!isEnd" @click.prevent="skip">跳过动画-></a>
     <span>
       <svg width="26" height="28" class="icon" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path
         fill-rule="evenodd"

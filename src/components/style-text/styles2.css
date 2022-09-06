@@ -1,24 +1,22 @@
 /**
  * 好像不太美观~
  * 
- * 现在做一些适当调整。
+ * 现在做一些适当调整
  */
 
 
 /**
- *
  * 先加个头像^^
- *
  */
-img {
+
+li img {
   zoom: 30%;
   float: right;
-  content:url(static/avatar.png);
+  content: url(static/avatar.png);
 }
 
 /**
  * 接着修改下字体
- *
  */
 
 li,.md > p {
@@ -72,8 +70,7 @@ h6 {
 
 
 /**
- * 
- * 还差最后一点就结束了。
+ * 还差最后一点就结束了
  */
 
 pre:hover {
@@ -81,6 +78,5 @@ pre:hover {
 }
 
 /**
- * 
  * 如果你觉得我还不错，可以与我联系~
  */
