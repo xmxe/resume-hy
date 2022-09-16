@@ -32,6 +32,8 @@
           this.$refs.workText.showWorkBox()
           await Promise.delay(2000)
           await this.$refs.styleText.write(2)
+          await Promise.delay(1000)
+          await this.$refs.styleText.write(3)
           this.$refs.footer.end()
         } catch (e) {
           if (e.message === 'SKIP IT') {

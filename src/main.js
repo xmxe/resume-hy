@@ -3,7 +3,8 @@ import App from './App'
 
 import 'common/stylus/index.styl'
 
-Vue.config.productionTip = false
+// 开发模式
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 let app = new Vue({

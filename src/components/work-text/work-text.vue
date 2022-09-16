@@ -1,8 +1,8 @@
 <template>
   <pre id="work-text" :class="workCls" v-show="show">
     <div v-if="preview" v-html="text"></div><div v-else>
-      <div class="text" v-html="workText"></div>
-      <div class="md" v-html="mdText"></div>
+      <div class="text" v-html="workText" v-show="!showMd"></div>
+      <div class="md" v-html="mdText" v-show="!showMd"></div>
     </div>
   </pre>
 </template>
@@ -25,6 +25,7 @@
         flipped: false,
         preview: true,
         show: false,
+        showMd: false,
         workText: workText,
         mdText: marked(workText)
       }
@@ -50,10 +51,11 @@
             if (flipping) {
               return
             }
-            let half = (this.$el.scrollHeight - this.$el.clientHeight) / 2
+            let half = (this.$el.scrollHeight - this.$el.clientHeight) / 2.8
             let pastHalf = this.flipped ? this.$el.scrollTop < half : this.$el.scrollTop > half
 
             if (pastHalf) {
+              // this.showMd = !this.showMd
               this.flipped = !this.flipped
               flipping = true
               await Promise.delay(500)

@@ -23,10 +23,6 @@ li,.md > p {
   font-size: 1.3em;
 }
 
-.md {
-  font-family: "KaiTi";
-}
-
 h1,h2,h3,h4,h5,h6,p,ul {
   margin-top: 1px;
   margin-bottom: 1px;
@@ -45,27 +41,27 @@ a {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 
