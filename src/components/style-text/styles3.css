@@ -6,3 +6,7 @@
 #style-text {
   display: none;
 }
+
+#work-text .text {
+  margin-bottom: 400px;
+}

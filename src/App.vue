@@ -26,6 +26,8 @@
     methods: {
       async startAnimation() {
         try {
+          // this.refs获取组件的实例对象
+
           await this.$refs.styleText.write(0)
           await this.$refs.workText.write()
           await this.$refs.styleText.write(1)
@@ -44,6 +46,7 @@
         }
       },
       surprisinglyShortAttentionSpan() {
+        // 一次性覆盖所有style样式
         this.$refs.styleText.writeToEnd()
         this.$refs.workText.showWorkBox()
         this.$refs.footer.end()

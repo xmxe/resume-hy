@@ -10,13 +10,15 @@ Vue.config.productionTip = true
 let app = new Vue({
   el: '#app',
   created() {
-    this.paused = false
-    this.animationSkipped = false
+    this.paused = false // 默认不暂停 即运行状态
+    this.animationSkipped = false // 默认不跳过动画
   },
   render: h => h(App)
 })
 
 let styleTagEl = document.getElementById('style-tag')
+
+// 在index.html里面加上css
 app.$on('styleAppend', (styleText) => {
   styleTagEl.textContent += styleText
 })
@@ -26,6 +28,7 @@ app.$on('styleOverwrite', (styleText) => {
 })
 
 app.$on('togglePause', function (state) {
+  // 0运行状态 页面显示'暂停||', 1暂停状态 页面显示'继续>>'
   this.paused = state === 1
 })
 

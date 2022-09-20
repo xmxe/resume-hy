@@ -2,7 +2,7 @@
   <pre id="work-text" :class="workCls" v-show="show">
     <div v-if="preview" v-html="text"></div><div v-else>
       <div class="text" v-html="workText" v-show="!showMd"></div>
-      <div class="md" v-html="mdText" v-show="!showMd"></div>
+      <div class="md" v-html="mdText" v-show="showMd"></div>
     </div>
   </pre>
 </template>
@@ -22,10 +22,10 @@
     mixins: [writeMixin],
     data() {
       return {
-        flipped: false,
-        preview: true,
-        show: false,
-        showMd: false,
+        flipped: false, // true为翻转后的markdown格式并加上'class=flipped'  false为翻转前的markdown源码格式
+        preview: true, // true为左侧简历还没有开始展示  false为左侧简历开始展示了
+        show: false, // 同preview
+        showMd: true,
         workText: workText,
         mdText: marked(workText)
       }
@@ -44,18 +44,24 @@
         this.show = true
         this.preview = false
         this.flipped = true
+        // 当数据更新了，在dom中渲染后，⾃动执⾏该函数
         this.$nextTick(() => {
           this.$el.scrollTop = 9999
+          // 是否正在翻转
           let flipping = false
+          // 滑动事件
           wheel(this.$el, async function (dx, dy) {
             if (flipping) {
               return
             }
-            let half = (this.$el.scrollHeight - this.$el.clientHeight) / 2.8
-            let pastHalf = this.flipped ? this.$el.scrollTop < half : this.$el.scrollTop > half
+            // clienthight:693 scrollTop:text 856  md 2318 scrollHeight:text 1550 md 3018
+            // let half = (this.$el.scrollHeight - this.$el.clientHeight) / 10
+            // let pastHalf = this.flipped ? this.$el.scrollTop < half : this.$el.scrollTop < half
 
+            let pastHalf = this.flipped ? this.$el.scrollTop <= 0 : this.$el.scrollTop + this.$el.clientHeight >= this.$el.scrollHeight - 10
+            // debugger
             if (pastHalf) {
-              // this.showMd = !this.showMd
+              this.showMd = !this.showMd
               this.flipped = !this.flipped
               flipping = true
               await Promise.delay(500)
