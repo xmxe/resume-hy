@@ -24,8 +24,12 @@ html {
  * 等等
  */
 
-pre,a {
+pre {
   color: #d5cece;
+}
+
+a {
+  color: #64d5ea;
 }
 
 /**
@@ -70,26 +74,14 @@ pre:not(:empty) {
 .selector {
   color: #e69f0f;
 }
-.selector .key {
-  color: #64d5ea;
-}
 .key {
   color: #64d5ea;
 }
 .value {
   color: #be84f2;
 }
-.value.px {
+.value .px {
   color: #f92772;
-}
-
-/**
- * 现在我们有了一些进展
- * 再把它变得更立体一些
- */
-
-body {
-  perspective: 1000px;
 }
 
 #style-text {
@@ -105,3 +97,5 @@ body {
 pre:not(#style-text) {
   transform: rotateY(10deg);
 }
+
+
