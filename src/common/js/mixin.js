@@ -38,7 +38,7 @@ export const writeMixin = {
 
       if (mirrorToStyle) {
         // 让页面展示css style-text.vue调用
-        this.writeChar(chars)
+        this.writeChar(chars, index === message.length)
       } else {
         // 让页面不展示css work-text.vue调用
         this.writeSimpleChar(chars)
@@ -66,12 +66,18 @@ export const writeMixin = {
         return this.writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval)
       }
     },
-    writeChar(char) {
+    /**
+     * @param {*} char 单个字符
+     * @param {*} lastChar 最后一个字符
+     * 往id=style-tag里面写的css样式会写到最后一个分号,之后就不再往里面写了，加上这个判断让所有字符都写进样式里面
+     * 而不是止步于最后一个分号
+     */
+    writeChar(char, lastChar) {
       // 针对一些字符加上标签以使css修饰代码可读
       this.text = handleChar(this.text, char)
       this.styleBuffer += char
       // css以分号结束 将css加到index.html里面来使页面的css样式生效
-      if (char === ';') {
+      if (char === ';' || lastChar) {
         this.$root.$emit('styleAppend', this.styleBuffer)
         this.styleBuffer = ''
       }

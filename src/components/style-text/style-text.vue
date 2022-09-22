@@ -7,7 +7,7 @@
   import { writeMixin } from 'common/js/mixin'
   import { handleChar } from 'common/js/util'
 
-  const styleText = [0, 1, 2, 3].map((i) => {
+  const styleText = [0, 1, 2].map((i) => {
     return require('raw-loader!./styles' + i + '.css')
   })
 

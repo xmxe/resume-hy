@@ -11,6 +11,7 @@
   import WorkText from './components/work-text/work-text'
   import VFooter from './components/footer/footer'
   import Promise from 'bluebird'
+  import doneTxt from './components/style-text/done.txt'
 
   export default {
     name: 'App',
@@ -34,9 +35,10 @@
           this.$refs.workText.showWorkBox()
           await Promise.delay(2000)
           await this.$refs.styleText.write(2)
-          await Promise.delay(1000)
-          await this.$refs.styleText.write(3)
           this.$refs.footer.end()
+          await Promise.delay(2000)
+          // resume全屏
+          this.fullScreenResume()
         } catch (e) {
           if (e.message === 'SKIP IT') {
             this.surprisinglyShortAttentionSpan()
@@ -50,6 +52,11 @@
         this.$refs.styleText.writeToEnd()
         this.$refs.workText.showWorkBox()
         this.$refs.footer.end()
+        // resume全屏
+        this.fullScreenResume()
+      },
+      fullScreenResume() {
+        this.$root.$emit('styleAppend', doneTxt)
       }
     }
   }
@@ -62,4 +69,8 @@
     right: 0
     left: 0
     bottom: 20px
+
+  h1,h2,h3,h4,h5,h6,p,ul
+    margin: 1px 0px
+
 </style>

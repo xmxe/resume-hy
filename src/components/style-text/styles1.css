@@ -6,6 +6,9 @@
 
 #work-text {
   max-height: 94.5%;
+  animation-name: md; 
+  animation-duration: 3s;
+  animation-iteration-count: infinite; 
 }
 
 #work-text.flipped {

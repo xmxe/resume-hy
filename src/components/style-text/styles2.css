@@ -23,10 +23,6 @@ li,.md > p {
   font-size: 1.3em;
 }
 
-h1,h2,h3,h4,h5,h6,p,ul {
-  margin: 1px 0px;
-}
-
 blockquote {
   margin: 0.1rem 0px;
   border-left: 3px solid #dfe2e5;
@@ -64,20 +60,10 @@ h6 {
  * 还差最后一点就结束了
  */
 
-pre:hover {
-  box-shadow: 0px 0px 40px 5px rgba(255, 255, 255, 0.4);
-}
-
 @keyframes md {
   from { box-shadow: 0 0 30px rgb(79, 65, 57); }
   50% { box-shadow: 0 0 10px rgb(146, 181, 225); }
   to { box-shadow: 0 0 30px rgb(79, 65, 57); }
-}
-
-#work-text{
-  animation-name: md; 
-  animation-duration: 3s;
-  animation-iteration-count: infinite; 
 }
 
 /**

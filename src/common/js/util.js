@@ -10,7 +10,7 @@ const pxRegex2 = /p$/
  * 加上标签以使css修饰代码可读
  * @param {*} fullText 所有文本
  * @param {*} char 单个字符
- * @returns
+ * @returns 累加的字符
  */
 export function handleChar(fullText, char) {
   if (openComment && char !== '/') {
