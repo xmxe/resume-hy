@@ -8,6 +8,12 @@
         </path>
       </svg>
     </a>
+    <a href="https://xmxe.github.io/blog" v-show="isEnd">
+      <svg width="26" height="28" class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M34 10V4H8V38L14 35" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 44V10H40V44L27 37.7273L14 44Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </footer>
 </template>
 
@@ -52,6 +58,5 @@
     left: 50%
     transform: translate3d(-50%, 50%, 0)
     .icon
-      margin-left: 10px
       vertical-align: bottom
 </style>
