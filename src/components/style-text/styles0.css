@@ -74,10 +74,10 @@ pre:not(:empty) {
 .key {
   color: #64d5ea;
 }
-.value {
+.px {
   color: #be84f2;
 }
-.value .px {
+.em {
   color: #f92772;
 }
 

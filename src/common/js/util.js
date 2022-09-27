@@ -5,6 +5,8 @@ const valueRegex = /([^:]*)$/
 const selectorRegex = /(.*)$/
 const pxRegex = /\dp/
 const pxRegex2 = /p$/
+const emRegex = /\de/
+const emRegex2 = /e$/
 
 /**
  * 加上标签以使css修饰代码可读
@@ -28,7 +30,9 @@ export function handleChar(fullText, char) {
   } else if (char === '{') {
     fullText = fullText.replace(selectorRegex, '<span class="selector">$1</span>{')
   } else if (char === 'x' && pxRegex.test(fullText.slice(-2))) {
-    fullText = fullText.replace(pxRegex2, '<span class="value px">px</span>')
+    fullText = fullText.replace(pxRegex2, '<span class="px">px</span>')
+  } else if (char === 'm' && emRegex.test(fullText.slice(-2))) {
+    fullText = fullText.replace(emRegex2, '<span class="em">em</span>')
   } else {
     fullText += char
   }
