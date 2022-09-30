@@ -84,7 +84,7 @@ pre:not(:empty) {
 #style-text {
   transform: translateX(98.5%) rotateY(-10deg);
   transform-origin: right;
-  max-height: 94.5%;
+  max-height: 95.5%;
 }
 
 /**
