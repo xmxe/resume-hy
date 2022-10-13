@@ -65,6 +65,7 @@
 
 #### ![](static/github.svg)开源项目
 
+- [blog](https://github.com/xmxe/blog): 使用Hexo+Matery主题搭建的个人博客。
 - [jwt](https://github.com/xmxe/jwt)：使用JWT替代Cookie及Session认证，结合Spring Security实现鉴别、授权。
 - [oauth2](https://github.com/xmxe/oauth2)：第三方授权登录，如使用GitHub账号登录第三方网站。
 - [springboot](https://github.com/xmxe/springboot)：将主流技术集成到Spring Boot，如Sa-Token,Shiro,CAS单点登陆,Jasypt,Sharding-jdbc,WebSocket等。
