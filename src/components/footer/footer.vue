@@ -90,4 +90,10 @@
     .qrcode
       position: absolute
       bottom: 5px
+    @media only screen and (max-width: 601px)
+        .qrcode
+          position: absolute
+          bottom: 35px
+          left: 1px
+
 </style>
