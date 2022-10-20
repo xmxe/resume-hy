@@ -91,9 +91,22 @@
       position: absolute
       bottom: 5px
     @media only screen and (max-width: 601px)
-        .qrcode
-          position: absolute
-          bottom: 35px
-          left: 1px
+      .qrcode
+        position: absolute
+        bottom: 35px
+        left: 1px
+    @keyframes float {
+        100% {
+            transform: translateY(-13px)
+            box-shadow: 0 40px 10px -18px hsla(0, 0%, 0%, .2), 0 40px 16px -12px hsla(0, 0%, 0%, .2)
+        }
+    }
+    a
+      display inline-block
+      animation: float 1s infinite ease-in-out alternate
+      &:nth-of-type(odd)
+        animation-delay: .3s
+      &:hover
+        animation-play-state: paused
 
 </style>
