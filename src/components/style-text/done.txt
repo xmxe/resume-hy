@@ -9,3 +9,11 @@
 #work-text .text {
   margin-bottom: 400px;
 }
+
+li img:hover {
+  animation:fadenum 2s;
+}
+
+@keyframes fadenum {
+   100%{ transform:rotate(360deg); }
+}

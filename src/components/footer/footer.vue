@@ -98,7 +98,7 @@
     @keyframes float {
         100% {
             transform: translateY(-13px)
-            box-shadow: 0 40px 10px -18px hsla(0, 0%, 0%, .2), 0 40px 16px -12px hsla(0, 0%, 0%, .2)
+            // box-shadow: 0 40px 10px -18px hsla(0, 0%, 0%, .2), 0 40px 16px -12px hsla(0, 0%, 0%, .2)
         }
     }
     a
