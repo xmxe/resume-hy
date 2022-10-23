@@ -44,7 +44,6 @@ pre:not(:empty) {
   max-height: 44.6%;
   width: 49%;
   font-size: 14px;
-  padding: 10px 10px 20px;
   box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
   outline: 0;
 }
