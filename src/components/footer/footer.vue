@@ -88,17 +88,26 @@
     .qrcode
       position: absolute
       bottom: 5px
+      animation: move .4s linear 1 normal
+    @keyframes move
+      0%
+        transform: translate(100px, 0);
+        opacity: 0;
+      50%
+        transform: translate(50px, 0);
+        opacity: .5;
+      100%
+        transform: translate(0, 0);
+        opacity: 1;
     @media only screen and (max-width: 601px)
       .qrcode
         position: absolute
         bottom: 35px
         left: 1px
-    @keyframes float {
-      100% {
+    @keyframes float
+      100%
         transform: translateY(-13px)
         // box-shadow: 0 40px 10px -18px hsla(0, 0%, 0%, .2), 0 40px 16px -12px hsla(0, 0%, 0%, .2)
-      }
-    }
     a
       display inline-block
       animation: float 1s infinite ease-in-out alternate
