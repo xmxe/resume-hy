@@ -6,9 +6,7 @@
 
 #work-text {
   max-height: 95.5%;
-  animation-name: md; 
-  animation-duration: 3s;
-  animation-iteration-count: infinite; 
+  animation: md 3s infinite;
 }
 
 #work-text.flipped {
@@ -22,7 +20,7 @@
 }
 
 /**
- * 可以使用npm库marked来使markdown转换为html
+ * 可以使用npm库marked将markdown转换为html
  * 
  * 下面就是见证奇迹的时刻
  */

@@ -11,7 +11,7 @@
 }
 
 li img:hover {
-  animation:fadenum 2s;
+  animation: fadenum 2s;
 }
 
 @keyframes fadenum {

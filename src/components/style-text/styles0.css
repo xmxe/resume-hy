@@ -68,31 +68,35 @@ pre:not(:empty) {
   color: #857f6b;
   font-style: italic;
 }
+
 .selector {
   color: #e69f0f;
 }
+
 .key {
   color: #64d5ea;
 }
+
 .px {
   color: #be84f2;
 }
+
 .em {
   color: #f92772;
 }
 
 #style-text {
-  transform: translateX(98.5%) rotateY(-10deg);
+  transform: translateX(98%) rotateY(-10deg);
   transform-origin: right;
   max-height: 95.5%;
+}
+
+pre:not(#style-text) {
+  transform: rotateY(10deg);
 }
 
 /**
  * 好吧差不多了，接下来就聊聊我吧
  */
-
-pre:not(#style-text) {
-  transform: rotateY(10deg);
-}
 
 
