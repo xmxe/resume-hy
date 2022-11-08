@@ -10,7 +10,9 @@ const debug = process.env.NODE_ENV !== 'production'
 export const writeMixin = {
   data() {
     return {
+      // 页面展示的字符文本
       text: '',
+      // 控制字符速度
       speed: debug ? 0 : 35
     }
   },
@@ -23,8 +25,8 @@ export const writeMixin = {
      * @param {*} message style.css文件内容
      * @param {*} index 从第几个字符开始展示
      * @param {*} interval speed 展示速度 通过延时实现
-     * @param {*} mirrorToStyle true:使页面展示css/false:使页面不展示css
-     * @param {*} charsPerInterval 一次展示多少个字 如果展示超过1个字符的话也会导致css不生效
+     * @param {*} mirrorToStyle true:页面展示css false:页面不展示css
+     * @param {*} charsPerInterval 一次展示多少个字 测试发现如果展示超过1个字符的话也会导致css不生效
      */
     async writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval) {
       // 点击跳过动画
@@ -37,10 +39,10 @@ export const writeMixin = {
       el.scrollTop = el.scrollHeight
 
       if (mirrorToStyle) {
-        // 让页面展示css style-text.vue调用
+        // 让页面展示css style-text调用
         this.writeChar(chars, index === message.length)
       } else {
-        // 让页面不展示css work-text.vue调用
+        // 让页面不展示css work-text调用
         this.writeSimpleChar(chars)
       }
 
@@ -58,7 +60,7 @@ export const writeMixin = {
         if (endOfBlock.test(thisSlice)) {
           thisInterval = interval * 1
         }
-        // 当暂停时无限延时,否则延时一次
+        // 当暂停时无限延时
         do {
           await Promise.delay(thisInterval)
         } while (this.$root.paused)
@@ -69,8 +71,7 @@ export const writeMixin = {
     /**
      * @param {*} char 单个字符
      * @param {*} lastChar 最后一个字符
-     * 往id=style-tag里面写的css样式会写到最后一个分号,之后就不再往里面写了，加上这个判断让所有字符都写进样式里面
-     * 而不是止步于最后一个分号
+     * 往id=style-tag里面写的css样式会写到最后一个分号,之后就不再往里面写了，加上这个判断让所有字符都写进样式里面,而不是止步于最后一个分号
      */
     writeChar(char, lastChar) {
       // 针对一些字符加上标签以使css修饰代码可读

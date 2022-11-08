@@ -4,20 +4,6 @@
  * 现在做一些适当调整
  */
 
-/**
- * 先加个头像^^
- */
-
-li img {
-  zoom: 30%;
-  float: right;
-  content: url(static/avatar.png);
-}
-
-/**
- * 接着修改下字体
- */
-
 li,.md > p {
   font-size: 1.3em;
 }
@@ -52,17 +38,6 @@ h5 {
 
 h6 {
   font-size: 1em;
-}
-
-
-/**
- * 在加点动画就结束了
- */
-
-@keyframes md {
-  from { box-shadow: 0 0 30px rgb(79, 65, 57); }
-  50% { box-shadow: 0 0 10px rgb(146, 181, 225); }
-  to { box-shadow: 0 0 30px rgb(79, 65, 57); }
 }
 
 /**

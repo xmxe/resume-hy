@@ -1,68 +1,40 @@
 <template>
   <div id="app">
-    <style-text ref="styleText"></style-text>
-    <work-text ref="workText"></work-text>
-    <v-footer ref="footer"></v-footer>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import StyleText from './components/style-text/style-text'
-  import WorkText from './components/work-text/work-text'
-  import VFooter from './components/footer/footer'
-  import Promise from 'bluebird'
-  import doneTxt from './components/style-text/done.txt'
+import Vue from 'vue'
+import Toast from 'vue-toastification'
 
-  export default {
-    name: 'App',
-    components: {
-      VFooter,
-      StyleText,
-      WorkText
-    },
-    mounted() {
-      this.done = false
-      this.startAnimation()
-    },
-    methods: {
-      async startAnimation() {
-        try {
-          // this.refs获取组件的实例对象
+const options = {
+  // You can set your default options here
+  transition: 'Vue-Toastification__slideBlurred',
+  position: 'top-right',
+  timeout: 3000,
+  closeOnClick: true,
+  pauseOnFocusLoss: true,
+  pauseOnHover: true,
+  draggable: true,
+  draggablePercent: 0.6,
+  showCloseButtonOnHover: false,
+  hideProgressBar: true,
+  closeButton: false,
+  icon: true,
+  rtl: false
+}
+Vue.use(Toast, options)
 
-          await this.$refs.styleText.write(0)
-          await this.$refs.workText.write()
-          await this.$refs.styleText.write(1)
-          this.$refs.workText.showWorkBox()
-          await Promise.delay(2000)
-          await this.$refs.styleText.write(2)
-          this.$refs.footer.end()
-          await Promise.delay(2000)
-          // resume全屏
-          this.fullScreenResume()
-        } catch (e) {
-          if (e.message === 'SKIP IT') {
-            this.surprisinglyShortAttentionSpan()
-          } else {
-            throw e
-          }
-        }
-      },
-      surprisinglyShortAttentionSpan() {
-        // 一次性覆盖所有style样式
-        this.$refs.styleText.writeToEnd()
-        this.$refs.workText.showWorkBox()
-        this.$refs.footer.end()
-        // resume全屏
-        this.fullScreenResume()
-      },
-      fullScreenResume() {
-        this.$root.$emit('styleAppend', doneTxt)
-      }
-    }
-  }
+export default {
+  name: 'App'
+}
 </script>
 
 <style lang="stylus">
+  // Import the CSS or use your own!
+  @import 'vue-toastification/dist/index.css'
+
   #app
     position: absolute
     top: 0

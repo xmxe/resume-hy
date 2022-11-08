@@ -1,6 +1,6 @@
 let openComment = false
 const commentRegex = /(\/\*(?:[^](?!\/\*))*\*)$/
-const keyRegex = /([a-zA-Z- ^\n]*)$/
+const keyRegex = /([a-zA-Z- ^\r\n]*)$/
 const valueRegex = /([^:]*)$/
 const selectorRegex = /(.*)$/
 const pxRegex = /\dp/
