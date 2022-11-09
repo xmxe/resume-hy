@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
+    <index></index>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
 import Toast from 'vue-toastification'
+import index from '@/components/index'
 
 const options = {
   // You can set your default options here
@@ -27,7 +29,8 @@ const options = {
 Vue.use(Toast, options)
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {index}
 }
 </script>
 

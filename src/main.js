@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+// import router from './router'
 
 import 'common/stylus/index.styl'
 
@@ -14,8 +14,8 @@ let app = new Vue({
     this.paused = false // 默认不暂停 即运行状态
     this.animationSkipped = false // 默认不跳过动画
   },
-  render: h => h(App),
-  router
+  render: h => h(App)
+  // router
 })
 
 let styleTagEl = document.getElementById('style-tag')
