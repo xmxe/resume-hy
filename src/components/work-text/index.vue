@@ -1,6 +1,6 @@
 <template>
   <pre id="work-text" :class="workCls" v-show="show">
-    <div v-if="preview" v-html="text"></div><div v-else>
+    <div v-if="preview" v-html="text"></div><div style="position: absolute;" v-else>
       <div class="text" v-html="workText" v-show="!showMd"></div>
       <div class="md" v-html="mdText" v-show="showMd"></div>
       <keep-alive>
@@ -15,6 +15,11 @@
 <script>
 import biker from '../animation/biker'
 import dove from '../animation/dove'
+import cat from '../animation/cat'
+import bear from '../animation/bear'
+import sponge from '../animation/sponge'
+import car from '../animation/car'
+import elephant from '../animation/elephant'
 import { writeMixin } from 'common/js/mixin'
 import Promise from 'bluebird'
 import workText from './work.txt'
@@ -26,7 +31,15 @@ import marked from 'marked'
 export default {
   name: 'work-text',
   mixins: [writeMixin],
-  components: {biker, dove},
+  components: {
+    biker,
+    dove,
+    cat,
+    bear,
+    sponge,
+    car,
+    elephant
+  },
   data() {
     return {
       flipped: false, // true为翻转后的markdown格式并加上'class=flipped'  false为翻转前的markdown源码格式
@@ -36,7 +49,7 @@ export default {
       workText: workText,
       mdText: marked(workText),
       animation: 'dove',
-      animationArrays: ['biker', 'dove']
+      animationArrays: ['biker', 'cat', 'bear', 'sponge', 'car', 'elephant', 'dove']
     }
   },
   computed: {
@@ -99,8 +112,9 @@ export default {
 </script>
 <style lang="stylus" scoped>
   .compCls
-    float: right
-    margin-top: -30rem !important
+    position: absolute
+    bottom: 1rem
+    right: 1rem
     transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg)
 
   // 组件过渡动画 https://v2.cn.vuejs.org/v2/guide/transitions.html

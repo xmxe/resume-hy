@@ -1,9 +1,8 @@
 .bike {
     zoom: 0.33;
     width: 800px;
-    height: 500px;
+    height: 700px;
     margin: auto;
-    position: relative;
     /* background: #42B0CE; */
     overflow: hidden;
 }
@@ -16,7 +15,7 @@
 }
 
 .bike__bike {
-    top: 250px;
+    top: 450px;
     left: 200px;
     width: 370px;
     height: 210px;
@@ -1232,7 +1231,7 @@
 }
 
 .bike__cloud-1 {
-    top: 70px;
+    top: 270px;
     left: 300px;
     width: 60px;
     height: 60px;
@@ -1262,7 +1261,7 @@
 }
 
 .bike__cloud-2 {
-    top: 172px;
+    top: 372px;
     left: 110px;
     width: 34px;
     height: 34px;
@@ -1292,7 +1291,7 @@
 }
 
 .bike__cloud-3 {
-    top: 172px;
+    top: 372px;
     left: 630px;
     width: 34px;
     height: 34px;
@@ -2621,107 +2620,107 @@
 
 @keyframes bike-man {
     0% {
-        top: 60px;
+        top: 260px;
         left: 280px;
     }
 
     5% {
-        top: 63px;
+        top: 263px;
         left: 276px;
     }
 
     10% {
-        top: 71px;
+        top: 271px;
         left: 267px;
     }
 
     15% {
-        top: 78px;
+        top: 278px;
         left: 259px;
     }
 
     20% {
-        top: 86px;
+        top: 286px;
         left: 255px;
     }
 
     25% {
-        top: 96px;
+        top: 296px;
         left: 256px;
     }
 
     30% {
-        top: 100px;
+        top: 300px;
         left: 259px;
     }
 
     35% {
-        top: 98px;
+        top: 298px;
         left: 268px;
     }
 
     40% {
-        top: 93px;
+        top: 293px;
         left: 278px;
     }
 
     45% {
-        top: 88px;
+        top: 288px;
         left: 285px;
     }
 
     50% {
-        top: 86px;
+        top: 286px;
         left: 287px;
     }
 
     55% {
-        top: 86px;
+        top: 286px;
         left: 283px;
     }
 
     60% {
-        top: 89px;
+        top: 289px;
         left: 273px;
     }
 
     65% {
-        top: 92px;
+        top: 292px;
         left: 261px;
     }
 
     70% {
-        top: 93px;
+        top: 293px;
         left: 252px;
     }
 
     75% {
-        top: 90px;
+        top: 290px;
         left: 252px;
     }
 
     80% {
-        top: 83px;
+        top: 283px;
         left: 257px;
     }
 
     85% {
-        top: 74px;
+        top: 274px;
         left: 266px;
     }
 
     90% {
-        top: 70px;
+        top: 270px;
         left: 274px;
     }
 
     95% {
-        top: 67px;
+        top: 267px;
         left: 279px;
     }
 
     100% {
-        top: 60px;
+        top: 260px;
         left: 280px;
     }
 }

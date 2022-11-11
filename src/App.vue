@@ -10,6 +10,7 @@ import Vue from 'vue'
 import Toast from 'vue-toastification'
 import index from '@/components/index'
 
+// 弹窗选项配置
 const options = {
   // You can set your default options here
   transition: 'Vue-Toastification__slideBlurred',
@@ -30,7 +31,9 @@ Vue.use(Toast, options)
 
 export default {
   name: 'App',
-  components: {index}
+  components: {
+    index
+  }
 }
 </script>
 

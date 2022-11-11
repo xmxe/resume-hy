@@ -1,9 +1,8 @@
 .birds {
   zoom: 0.3;
-  position: relative;
   overflow: hidden;
   width: 800px;
-  height: 500px;
+  height: 700px;
   margin: auto;
 }
 .birds *,
@@ -13,7 +12,7 @@
   content: "";
 }
 .birds__hatdove {
-  top: 70px;
+  top: 270px;
   left: 450px;
   width: 255px;
   height: 400px;
@@ -357,7 +356,7 @@
   animation-delay: -0.4s;
 }
 .birds__rundove {
-  top: 70px;
+  top: 270px;
   left: 90px;
   width: 255px;
   height: 400px;
@@ -466,7 +465,7 @@
   animation: rundove-tail 2.75s linear infinite;
 }
 .birds__rundove-shadow {
-  top: 433px;
+  top: 633px;
   left: 43px;
   width: 162px;
   height: 12px;
@@ -708,7 +707,7 @@
   background: #dddddd;
 }
 .birds__table {
-  top: 272px;
+  top: 472px;
   left: 217px;
   width: 374px;
   height: 10px;
@@ -731,7 +730,7 @@
   border-width: 0 54px 30px;
 }
 .birds__laptop:nth-child(3) {
-  top: 265px;
+  top: 465px;
   left: 476px;
   height: 7px;
   width: 80px;
@@ -749,7 +748,7 @@
   transform: skew(20deg);
 }
 .birds__laptop:nth-child(4) {
-  top: 265px;
+  top: 465px;
   left: 256px;
   height: 7px;
   width: 186px;
@@ -816,7 +815,7 @@
   border-radius: 8px;
 }
 .birds__coffee {
-  top: 229px;
+  top: 429px;
   left: 335px;
   height: 43px;
   width: 35px;
@@ -839,7 +838,7 @@
   background: #e2e2e2;
 }
 .birds__feather:nth-child(6) {
-  top: 296px;
+  top: 496px;
   left: 234px;
   width: 15px;
   height: 60px;
@@ -861,7 +860,7 @@
   background: #878787;
 }
 .birds__feather:nth-child(7) {
-  top: 296px;
+  top: 496px;
   left: 234px;
   width: 15px;
   height: 60px;
