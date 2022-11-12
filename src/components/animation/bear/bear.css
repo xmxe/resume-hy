@@ -1,26 +1,12 @@
 .container {
   zoom: 0.5;
-  width: 500px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  width: 340px;
+  height: 400px;
 }
 
 .bear {
+  position: absolute;
+  bottom:10px;
   width: 240px;
   -webkit-animation: updown 2s infinite alternate;
   animation: updown 2s infinite alternate;
@@ -163,6 +149,8 @@
 }
 
 .shadow {
+  position: absolute;
+  bottom: 1px;
   width: 200px;
   height: 30px;
   margin: auto;

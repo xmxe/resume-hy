@@ -57,13 +57,10 @@ export default {
       // 自定义的css
       this.$root.$emit('styleAppend', doneTxt)
 
-      // 定时切换动画组件
-      // this.$refs.workText.changeAnimation()
-
       // 延时展示提示框
       setTimeout(() => {
         // 弹出提示框
-        this.$toast('点击切换其他有趣的动画^^')
+        this.$toast('尝试点击切换其他有趣的动画≧▽≦')
       }, 2000)
     }
   }

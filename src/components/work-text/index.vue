@@ -18,8 +18,10 @@ import dove from '../animation/dove'
 import cat from '../animation/cat'
 import bear from '../animation/bear'
 import sponge from '../animation/sponge'
-import car from '../animation/car'
+import dozing from '../animation/dozing'
 import elephant from '../animation/elephant'
+import submarine from '../animation/submarine'
+import earth from '../animation/earth'
 import { writeMixin } from 'common/js/mixin'
 import Promise from 'bluebird'
 import workText from './work.txt'
@@ -37,8 +39,10 @@ export default {
     cat,
     bear,
     sponge,
-    car,
-    elephant
+    dozing,
+    elephant,
+    submarine,
+    earth
   },
   data() {
     return {
@@ -48,8 +52,8 @@ export default {
       showMd: true,
       workText: workText,
       mdText: marked(workText),
-      animation: 'dove',
-      animationArrays: ['biker', 'cat', 'bear', 'sponge', 'car', 'elephant', 'dove']
+      animation: 'earth',
+      animationArrays: ['dove', 'biker', 'cat', 'bear', 'sponge', 'dozing', 'elephant', 'submarine', 'earth']
     }
   },
   computed: {
@@ -97,15 +101,17 @@ export default {
     },
     changeAnimation() {
       const length = this.animationArrays.length
+      // 顺序获取动画
       // 获取数组元素下标 方法1
       // let i = this.animationArrays.map(item => item).indexOf(this.animation)
       // 获取数组元素下标 方法2
-      let i = (this.animationArrays || []).findIndex((item) => item === this.animation)
-      i++
-      // setInterval(() => {
-      if (i >= length) i = 0
-      this.animation = this.animationArrays[i]
-      // }, 5000)
+      // let i = (this.animationArrays || []).findIndex((item) => item === this.animation)
+      // i++
+      // if (i >= length) i = 0
+      // this.animation = this.animationArrays[i]
+
+      // 随机获取动画
+      this.animation = this.animationArrays[Math.floor(Math.random() * length)]
     }
   }
 }
@@ -113,8 +119,8 @@ export default {
 <style lang="stylus" scoped>
   .compCls
     position: absolute
-    bottom: 1rem
-    right: 1rem
+    bottom: 1px
+    right: 1px
     transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg)
 
   // 组件过渡动画 https://v2.cn.vuejs.org/v2/guide/transitions.html

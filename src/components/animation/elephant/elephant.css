@@ -1,6 +1,5 @@
 .ele-container {
   height: 500px;
-  overflow: hidden;
   width: 500px;
   zoom: 0.5;
 }
@@ -8,7 +7,7 @@
 .ele-wrapper {
   -webkit-animation: ele-movement 1s infinite linear;
   animation: ele-movement 1s infinite linear;
-  left: 50%;
+  left: 40%;
   position: absolute;
   top: 50%;
   -webkit-transform: translate3D(-50%, -75%, 0);
