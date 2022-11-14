@@ -15,7 +15,7 @@ const options = {
   // You can set your default options here
   transition: 'Vue-Toastification__slideBlurred',
   position: 'top-right',
-  timeout: 3000,
+  timeout: 3500,
   closeOnClick: true,
   pauseOnFocusLoss: true,
   pauseOnHover: true,

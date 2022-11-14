@@ -60,7 +60,7 @@ export default {
       // 延时展示提示框
       setTimeout(() => {
         // 弹出提示框
-        this.$toast('尝试点击切换其他有趣的动画≧▽≦')
+        this.$toast('点击切换其他有趣的动画≧▽≦')
       }, 2000)
     }
   }

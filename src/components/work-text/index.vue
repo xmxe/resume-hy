@@ -22,6 +22,7 @@ import dozing from '../animation/dozing'
 import elephant from '../animation/elephant'
 import submarine from '../animation/submarine'
 import earth from '../animation/earth'
+import seasons from '../animation/seasons'
 import { writeMixin } from 'common/js/mixin'
 import Promise from 'bluebird'
 import workText from './work.txt'
@@ -42,7 +43,8 @@ export default {
     dozing,
     elephant,
     submarine,
-    earth
+    earth,
+    seasons
   },
   data() {
     return {
@@ -53,7 +55,7 @@ export default {
       workText: workText,
       mdText: marked(workText),
       animation: 'earth',
-      animationArrays: ['dove', 'biker', 'cat', 'bear', 'sponge', 'dozing', 'elephant', 'submarine', 'earth']
+      animationArrays: ['earth', 'dove', 'biker', 'cat', 'bear', 'sponge', 'dozing', 'elephant', 'submarine', 'seasons']
     }
   },
   computed: {
@@ -105,13 +107,12 @@ export default {
       // 获取数组元素下标 方法1
       // let i = this.animationArrays.map(item => item).indexOf(this.animation)
       // 获取数组元素下标 方法2
-      // let i = (this.animationArrays || []).findIndex((item) => item === this.animation)
-      // i++
-      // if (i >= length) i = 0
-      // this.animation = this.animationArrays[i]
+      let i = (this.animationArrays || []).findIndex(item => item === this.animation)
+      i++
+      this.animation = this.animationArrays[i === length ? 0 : i]
 
       // 随机获取动画
-      this.animation = this.animationArrays[Math.floor(Math.random() * length)]
+      // this.animation = this.animationArrays[Math.floor(Math.random() * length)]
     }
   }
 }
