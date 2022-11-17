@@ -29,7 +29,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'elephant'
+}
 </script>
 
 <style scoped>

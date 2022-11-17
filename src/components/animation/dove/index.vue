@@ -67,7 +67,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'dove'
+}
 </script>
 
 <style scoped>

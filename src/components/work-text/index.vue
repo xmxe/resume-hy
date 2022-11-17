@@ -13,16 +13,6 @@
 </template>
 
 <script>
-import biker from '../animation/biker'
-import dove from '../animation/dove'
-import cat from '../animation/cat'
-import bear from '../animation/bear'
-import sponge from '../animation/sponge'
-import dozing from '../animation/dozing'
-import elephant from '../animation/elephant'
-import submarine from '../animation/submarine'
-import earth from '../animation/earth'
-import seasons from '../animation/seasons'
 import { writeMixin } from 'common/js/mixin'
 import Promise from 'bluebird'
 import workText from './work.txt'
@@ -31,21 +21,24 @@ import marked from 'marked'
 // import Markdown from 'markdown'
 // const toHTML = Markdown.markdown.toHTML
 
+let components = {}
+let animationArrays = []
+// 参数1:要搜索的文件夹目录 参数2:是否搜索它的子目录 参数3:匹配文件的正则表达式。
+const fieldsComponents = require.context('@/components/animation', true, /\.vue$/)
+fieldsComponents.keys().forEach(element => {
+  // 组件实例
+  const com = fieldsComponents(element)
+  // 截取路径作为组件名
+  const comName = com.default.name
+  animationArrays.push(comName)
+  // 截取组件去扩展名后, 添加到组件对象
+  components[comName] = com.default || com
+})
+
 export default {
   name: 'work-text',
   mixins: [writeMixin],
-  components: {
-    biker,
-    dove,
-    cat,
-    bear,
-    sponge,
-    dozing,
-    elephant,
-    submarine,
-    earth,
-    seasons
-  },
+  components: components,
   data() {
     return {
       flipped: false, // true为翻转后的markdown格式并加上'class=flipped'  false为翻转前的markdown源码格式
@@ -55,7 +48,7 @@ export default {
       workText: workText,
       mdText: marked(workText),
       animation: 'earth',
-      animationArrays: ['earth', 'dove', 'biker', 'cat', 'bear', 'sponge', 'dozing', 'elephant', 'submarine', 'seasons']
+      animationArrays: animationArrays
     }
   },
   computed: {

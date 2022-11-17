@@ -38,7 +38,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'cat'
+}
 </script>
 
 <style scoped>

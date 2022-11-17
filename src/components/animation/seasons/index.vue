@@ -900,7 +900,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'seasons'
+}
 </script>
 
 <style scoped>

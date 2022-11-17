@@ -78,7 +78,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'biker'
+}
 </script>
 
 <style scoped>
