@@ -3,12 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="static/favicon.ico">
     <title>zhengfl's resume</title>
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="static/loading.css" >
     <style id="style-tag"></style>
   </head>
   <body spellcheck="false">
-    <div id="app"></div>
+    <div id="app">
+      <!-- loading解析:三个实色圆形横向排列,线性动画scale从0到1,通过给它们不同的延迟时间,呈现依次交替的效果 -->
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
