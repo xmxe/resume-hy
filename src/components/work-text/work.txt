@@ -89,7 +89,7 @@
 
 - GitHub: https://github.com/xmxe
 - Gitee: https://gitee.com/xmxe
-- 博客: https://xmxe.github.io/blog
+- 博客: https://xmxe.gitee.io/blog
 
 ---
 
