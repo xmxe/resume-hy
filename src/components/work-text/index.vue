@@ -1,6 +1,6 @@
 <template>
   <pre id="work-text" :class="workCls" v-show="show">
-    <div v-if="preview" v-html="text"></div><div style="position: absolute;" v-else>
+    <div v-if="preview" v-html="text"></div><div style="position: absolute;width: 99%;" v-else>
       <div class="text" v-html="workText" v-show="!showMd"></div>
       <div class="md" v-html="mdText" v-show="showMd"></div>
       <keep-alive>
