@@ -47,7 +47,7 @@ export default {
       showMd: true,
       workText: workText,
       mdText: marked(workText),
-      animation: 'earth',
+      animation: 'biker',
       animationArrays: animationArrays
     }
   },

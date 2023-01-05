@@ -13,11 +13,11 @@
 }
 
 /**
- * 白色背景太单调了,我们来做一些变化
+ * 白色背景太单调了,我们来模拟下星空的背景
  */
 
 html:after {
-  content: "";
+  content: '';
   position: absolute;
   height: 2px;
   width: 2px;
@@ -33,9 +33,6 @@ pre {
   color: #d5cece;
 }
 
-a {
-  color: #64d5ea;
-}
 
 /**
  * 看上去好多了,但是在整个屏幕上写代码有点浪费空间了

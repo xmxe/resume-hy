@@ -14,6 +14,13 @@ pre
   white-space: pre-wrap
   border-radius: 1px
 
+pre:not(:empty)
+  padding: 10px 10px 20px
+
+@media only screen and (max-width: 601px)
+  pre:not(:empty)
+    padding: 10px 1px 20px
+
 a:after
   content: ''
   padding-right: 5px
@@ -22,14 +29,10 @@ a:after
 a:last-of-type:after
   border: none
 
-pre:not(:empty)
-  padding: 10px 10px 20px
+a
+  color: #64d5ea
 
-@media only screen and (max-width: 601px)
-  pre:not(:empty)
-    padding: 10px 1px 20px
-
-:root {
+:root
   --box-shadow: 620px 1759px 0 0px rgba(255, 255, 255, 0.379),
     115px 1477px 0 0px rgba(255, 255, 255, 0.583),
     1146px 20px 0 0px rgba(255, 255, 255, 0.761),
@@ -529,5 +532,4 @@ pre:not(:empty)
     885px 1174px 0 0px rgba(255, 255, 255, 0.612),
     1344px 567px 0 0px rgba(255, 255, 255, 0.971),
     205px 1186px 0 0px rgba(255, 255, 255, 0.842),
-    1021px 1707px 0 0px rgba(255, 255, 255, 0.067);
-}
+    1021px 1707px 0 0px rgba(255, 255, 255, 0.067)
