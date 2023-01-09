@@ -906,5 +906,5 @@ export default {
 </script>
 
 <style scoped>
-@import './seasons.css'
+@import './style.css'
 </style>

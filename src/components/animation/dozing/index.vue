@@ -26,5 +26,5 @@ export default {
 </script>
 
 <style scoped>
-@import './dozing.css'
+@import './style.css'
 </style>

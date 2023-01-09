@@ -92,7 +92,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
   footer
     position: absolute
     bottom: 0
@@ -130,5 +130,12 @@ export default {
         animation-delay: .3s
       &:hover
         animation-play-state: paused
+        svg
+          transform: scale(1.5)
+          margin: 0 2px
+      svg
+        box-reflect: below 2px gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255, 255, 255, .5)))
+        transition: all 0.3s
+        transform-origin: 40% 70%
 
 </style>

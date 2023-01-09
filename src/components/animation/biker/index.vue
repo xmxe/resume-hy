@@ -84,5 +84,5 @@ export default {
 </script>
 
 <style scoped>
-@import './biker.css';
+@import './style.css';
 </style>

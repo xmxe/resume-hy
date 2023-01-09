@@ -21,5 +21,5 @@ export default {
 </script>
 
 <style scoped>
-@import './earth.css';
+@import './style.css';
 </style>

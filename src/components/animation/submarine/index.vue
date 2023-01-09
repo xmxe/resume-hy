@@ -29,5 +29,5 @@ export default {
 </script>
 
 <style scoped>
-@import "./submarine.css";
+@import "./style.css";
 </style>

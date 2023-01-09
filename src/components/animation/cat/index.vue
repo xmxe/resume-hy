@@ -44,5 +44,5 @@ export default {
 </script>
 
 <style scoped>
-@import './cat.css';
+@import './style.css';
 </style>

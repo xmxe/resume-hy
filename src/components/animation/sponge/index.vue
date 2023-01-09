@@ -38,5 +38,5 @@ export default {
 </script>
 
 <style scoped>
-@import "./sponge.css";
+@import "./style.css";
 </style>

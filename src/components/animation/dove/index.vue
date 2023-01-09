@@ -73,5 +73,5 @@ export default {
 </script>
 
 <style scoped>
-@import './dove.css';
+@import './style.css';
 </style>

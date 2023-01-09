@@ -35,5 +35,5 @@ export default {
 </script>
 
 <style scoped>
-@import './elephant.css';
+@import './style.css';
 </style>

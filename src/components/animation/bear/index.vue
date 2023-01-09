@@ -26,5 +26,5 @@ export default {
 </script>
 
 <style scoped>
-@import './bear.css';
+@import './style.css';
 </style>

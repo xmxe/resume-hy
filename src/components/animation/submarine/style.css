@@ -6,7 +6,8 @@
 
 .submarine {
   height: 200px;
-  width: 200px; 
+  width: 200px;
+  zoom: 1.1;
 }
 
 .sea {
