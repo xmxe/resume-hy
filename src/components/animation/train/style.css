@@ -1,18 +1,16 @@
 .center {
-  height: 700px;
-  margin: auto;
-  overflow: hidden;
-  width: 800px;
-  zoom: 0.33;
+  height: 500px;
+  width: 500px;
+  zoom: 0.37;
 }
 
 .train {
-  animation: move-train 5s linear infinite;
-  bottom: 12.6rem;
-  height: 10rem;
+  animation: move-train 3s linear infinite;
+  bottom: 20px;
+  height: 100%;
   position: absolute;
-  left: calc(100% + 1.3rem);
-  width: 44rem;
+  left: 100%;
+  width: 100%;
   z-index: 1;
 }
 
