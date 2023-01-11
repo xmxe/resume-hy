@@ -56,12 +56,21 @@ export default {
     otherOperations() {
       // 自定义的css
       this.$root.$emit('styleAppend', doneTxt)
-
+      let msg = '点击切换其他有趣的动画≧▽≦'
+      if (this.isMobile()) {
+        msg = '木叶飞舞之处 火亦生生不息🔥'
+      }
       // 延时展示提示框
       setTimeout(() => {
-        // 弹出提示框
-        this.$toast('点击切换其他有趣的动画≧▽≦')
+          // 弹出提示框
+        this.$toast(msg)
       }, 2000)
+    },
+    // 判断是否是移动设备
+    isMobile() {
+      // navigator.userAgent会返回一个只读的字符串,声明了浏览器在发送http请求时的用户代理头的值,/i是表示不区分大小写
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag
     }
   }
 }
