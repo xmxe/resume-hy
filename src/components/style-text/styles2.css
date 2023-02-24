@@ -15,31 +15,18 @@ blockquote {
   border-left: 3px solid #dfe2e5;
   padding: 0 1px;
   color: #a69f9f;
-  font-size: 1.3em;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.8em;
-}
-
-h3 {
-  font-size: 1.6em;
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: 1.8em;
 }
 
 h5 {
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1.4em;
 }
 
 /**
