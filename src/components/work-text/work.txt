@@ -70,10 +70,10 @@
 
 ##### 技术文章
 
-- [JVM知识点](https://xmxe.gitee.io/blog/posts/clenmkfqe000ej4fxh87b3q9d/)
-- [Spring相关](https://xmxe.gitee.io/blog/posts/clenmkfr4001hj4fxaayj2ag9/)
-- [详细介绍ElasticSearch](https://xmxe.gitee.io/blog/posts/clenmkfro002sj4fx6z0cavv6/)
-- [常见的限流算法](https://xmxe.gitee.io/blog/posts/clenmkfrd0021j4fx4m7f9tcn/)
+- [JVM知识点](https://xmxe.gitee.io/blog/posts/be5a099f7894/)
+- [Spring相关](https://xmxe.gitee.io/blog/posts/e47eee220e74/)
+- [详细介绍ElasticSearch](https://xmxe.gitee.io/blog/posts/481c9c5e41f7/)
+- [常见的限流算法](https://xmxe.gitee.io/blog/posts/f55fdb8ec84c/)
 
 ---
 
