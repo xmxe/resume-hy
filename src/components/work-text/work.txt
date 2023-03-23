@@ -56,7 +56,7 @@
 
 ##### 开源项目
 
-- [blog](https://github.com/xmxe/blog): 使用Hexo+Matery主题搭建的个人博客。
+- [blog](https://gitee.com/xmxe/blog): 使用Hexo+Matery主题搭建的个人博客。
 - [jwt](https://github.com/xmxe/jwt): 使用JWT替代Cookie及Session认证，结合Spring Security实现鉴别、授权。
 - [oauth2](https://github.com/xmxe/oauth2): 第三方授权登录，如使用GitHub账号登录第三方网站。
 - [springboot](https://github.com/xmxe/springboot): 将主流技术集成到Spring Boot，如Sa-Token,Shiro,CAS单点登陆,Jasypt,Sharding-jdbc,WebSocket等。
@@ -72,7 +72,7 @@
 
 - [JVM知识点](https://xmxe.gitee.io/blog/posts/be5a099f7894/)
 - [Spring相关](https://xmxe.gitee.io/blog/posts/e47eee220e74/)
-- [详细介绍ElasticSearch](https://xmxe.gitee.io/blog/posts/481c9c5e41f7/)
+- [ElasticSearch详解](https://xmxe.gitee.io/blog/posts/38f9e76ec464/)
 - [常见的限流算法](https://xmxe.gitee.io/blog/posts/f55fdb8ec84c/)
 
 ---
