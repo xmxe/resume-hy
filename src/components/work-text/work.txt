@@ -80,7 +80,7 @@
 #### ![](static/code.svg)专业技能
 
 - 有着扎实的Java编程基础，熟悉JAVAEE相关技术，能够掌握面向对象的编程及开发。
-- 熟悉HTML、CSS、JavaScript等前端技术，了解主流框架如NodeJS。
+- 熟悉HTML、CSS、JavaScript等前端技术，了解前端主流框架及微信小程序。
 - 掌握Oracle、MySQL、SQL Server等关系型数据库，能够灵活运用SQL进行数据的增删查改及调优，了解主流开源NoSQL系统如MongoDB，ElasticSearch等。
 - 熟练使用Spring、SpringMVC、Spring Boot、Spring Cloud等框架进行集成开发。
 - 熟练使用Eclipse、IntelliJ IDEA、VS Code等IDE，熟悉Tomcat、Jetty中间件，熟练使用Git、SVN等版本控制工具。

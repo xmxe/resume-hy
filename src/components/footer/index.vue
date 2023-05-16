@@ -44,7 +44,7 @@
           fill="#878787" transform="translate(235.306619, 182.500000) scale(-1, 1) translate(-235.306619, -182.500000) "></path>
       </svg>
     </a>
-    <img class="qrcode" src="static/wechat.jpg" v-show="qrcodeShow">
+    <img class="qrcode" src="static/xcx.png" v-show="qrcodeShow">
   </footer>
 </template>
 
@@ -104,6 +104,7 @@ export default {
       position: absolute
       bottom: 5px
       animation: move .4s linear 1 normal
+      zoom: 35%
     @keyframes move
       0%
         transform: translate(100px, 0)
@@ -116,7 +117,6 @@ export default {
         opacity: 1
     @media only screen and (max-width: 601px)
       .qrcode
-        position: absolute
         bottom: 35px
         left: 1px
     @keyframes float
