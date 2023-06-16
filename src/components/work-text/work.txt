@@ -75,6 +75,10 @@
 - [ElasticSearch详解](https://xmxe.gitee.io/blog/posts/38f9e76ec464/)
 - [常见的限流算法](https://xmxe.gitee.io/blog/posts/f55fdb8ec84c/)
 
+##### 小程序
+
+<img src="static/xcx.png" style="zoom:35%;" />
+
 ---
 
 #### ![](static/code.svg)专业技能
