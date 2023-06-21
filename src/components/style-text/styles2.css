@@ -17,16 +17,14 @@ blockquote {
   color: #a69f9f;
 }
 
-h4 {
-  font-size: 1.8em;
+p {
+  display: flex;
 }
 
-h5 {
-  font-size: 1.6em;
-}
-
-h6 {
-  font-size: 1.4em;
+p img {
+  width: 180px;
+  height: 180px;
+  margin: auto;
 }
 
 /**
