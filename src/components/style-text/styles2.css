@@ -17,15 +17,15 @@ blockquote {
   color: #a69f9f;
 }
 
-p {
+.md > p {
   display: flex;
   flex-wrap: wrap;
 }
 
-p img {
+.md > p > img {
   width: 180px;
   height: 180px;
-  margin: auto;
+  margin: 10px auto;
 }
 
 /**
