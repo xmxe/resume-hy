@@ -15,7 +15,7 @@ export default {
   mixins: [writeMixin],
   methods: {
     async write(index) {
-      await this.writeTo(this.$el, styleText[index], 0, this.speed, true, 1)
+      await this.writeTo(this.$el, styleText[index], 0, true, 1)
     },
     writeToEnd() {
       let txt = styleText.join('\n')

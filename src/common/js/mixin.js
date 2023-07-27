@@ -1,20 +1,20 @@
 import Promise from 'bluebird'
 import { handleChar } from 'common/js/util'
+import { mapState } from 'vuex'
 
 const endOfSentence = /[？！。~：]$/
 const comma = /\D[，；、]$/
 const endOfBlock = /[^/]\n\n$/
 
-const debug = process.env.NODE_ENV !== 'production'
-
 export const writeMixin = {
   data() {
     return {
       // 页面展示的字符文本
-      text: '',
-      // 控制字符速度
-      speed: debug ? 0 : 35
+      text: ''
     }
+  },
+  computed: {
+    ...mapState(['speed'])
   },
   created() {
     this.styleBuffer = ''
@@ -24,11 +24,10 @@ export const writeMixin = {
      * @param {*} el 组件元素
      * @param {*} message style.css文件内容
      * @param {*} index 从第几个字符开始展示
-     * @param {*} interval speed 展示速度 通过延时实现
      * @param {*} mirrorToStyle true:页面展示css false:页面不展示css
      * @param {*} charsPerInterval 一次展示多少个字 测试发现如果展示超过1个字符的话也会导致css不生效
      */
-    async writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval) {
+    async writeTo(el, message, index, mirrorToStyle, charsPerInterval) {
       // 点击跳过动画
       if (this.$root.animationSkipped) {
         throw new Error('SKIP IT')
@@ -47,25 +46,25 @@ export const writeMixin = {
       }
 
       if (index < message.length) {
-        let thisInterval = interval
+        let thisInterval = this.speed
         let thisSlice = message.slice(index - 2, index)
         // 控制特殊字符的展示速度
         if (comma.test(thisSlice)) {
-          thisInterval = interval * 1
+          thisInterval = this.speed * 1
         }
         if (endOfSentence.test(thisSlice)) {
-          thisInterval = interval * 1
+          thisInterval = this.speed * 1.1
         }
         thisSlice = message.slice(index - 2, index + 1)
         if (endOfBlock.test(thisSlice)) {
-          thisInterval = interval * 1
+          thisInterval = this.speed * 1.2
         }
         // 当暂停时无限延时
         do {
           await Promise.delay(thisInterval)
         } while (this.$root.paused)
 
-        return this.writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval)
+        return this.writeTo(el, message, index, mirrorToStyle, charsPerInterval)
       }
     },
     /**

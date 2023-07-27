@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import store from './store'
 // import router from './router'
 
 import 'common/stylus/index.styl'
@@ -7,14 +8,16 @@ import 'common/stylus/index.styl'
 // 开发模式
 Vue.config.productionTip = true
 
-/* eslint-disable no-new */
 let app = new Vue({
   el: '#app',
   created() {
-    this.paused = false // 默认不暂停 即运行状态
-    this.animationSkipped = false // 默认不跳过动画
+    // 默认不暂停 即运行状态
+    this.paused = false
+    // 默认不跳过动画
+    this.animationSkipped = false
   },
-  render: h => h(App)
+  render: h => h(App),
+  store
   // router
 })
 

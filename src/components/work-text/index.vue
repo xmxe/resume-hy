@@ -59,7 +59,7 @@ export default {
   methods: {
     async write() {
       this.show = true
-      await this.writeTo(this.$el, workText, 0, this.speed, false, 1)
+      await this.writeTo(this.$el, workText, 0, false, 1)
     },
     showWorkBox() {
       this.show = true
