@@ -1,0 +1,28 @@
+
+
+/** 
+ * 左侧的markdown看起来并不直观
+ *
+ * 我们稍作修饰
+ */
+
+#work-text {
+  height: 95.5%;
+  max-height: 95.5%;
+}
+
+#work-text.flipped {
+  transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
+}
+
+#work-text .md {
+  transform: rotateY(190deg) rotateZ(180deg);
+  margin-top: 15rem;
+  font-family: "KaiTi";
+}
+
+/**
+ * 可以安装marked(npm install marked --save)将markdown转换为html
+ * 
+ * 下面就是见证奇迹的时刻
+ */

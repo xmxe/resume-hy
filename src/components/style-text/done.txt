@@ -1,0 +1,18 @@
+#work-text {
+  width: 99%;
+  animation: md 3s infinite;
+}
+  
+#style-text {
+  display: none;
+}
+
+@keyframes md {
+  from { box-shadow: 0 0 30px rgb(79, 65, 57); }
+  50% { box-shadow: 0 0 10px rgb(146, 181, 225); }
+  to { box-shadow: 0 0 30px rgb(79, 65, 57); }
+}
+
+#work-text .text {
+  margin-bottom: 15rem;
+}

@@ -1,0 +1,95 @@
+/**
+ * 你好,我叫zhengfl.想找一份高级工程师或架构师的工作
+ * 我喜欢研究一些有趣的技术,这个就是从https://github.com/ustbhuangyi/resume fork而来
+ */
+
+/**
+ * 那么开始吧
+ * 首先给所有元素加上过渡效果~
+ */
+
+* {
+  transition: all 1s;
+}
+
+/**
+ * 白色背景太单调了,我们来模拟下星空的背景
+ */
+
+html:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  top: -2px;
+  box-shadow: var(--box-shadow);
+}
+
+html {
+  background: rgb(6, 35, 60);
+}
+
+pre {
+  color: #d5cece;
+}
+
+
+/**
+ * 看上去好多了,但是在整个屏幕上写代码有点浪费空间了
+ */
+
+pre:not(:empty) {
+  position: absolute;
+  background: radial-gradient(ellipse at bottom, #1c2837 0%, #050608 100%);
+  border: 1px solid #ccc;
+  max-height: 44.6%;
+  width: 49%;
+  font-size: 14px;
+  box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+  outline: 0;
+}
+
+/**
+ * 接下来我们在把它移到屏幕右侧并提升点高度
+ */
+
+#style-text {
+  transform: translateX(98%) rotateY(-10deg);
+  transform-origin: right;
+  max-height: 95.5%;
+}
+
+pre:not(#style-text) {
+  transform: rotateY(10deg);
+}
+
+/**
+ * 看上去还不错,但是所有的字体颜色是白色的
+ *
+ * 那么,我们来把代码变的更加可读吧~
+ */
+
+.comment {
+  color: #857f6b;
+  font-style: italic;
+}
+
+.selector {
+  color: #e69f0f;
+}
+
+.key {
+  color: #64d5ea;
+}
+
+.px {
+  color: #be84f2;
+}
+
+.em {
+  color: #f92772;
+}
+
+/**
+ * 好吧差不多了,接下来就聊聊我吧
+ */

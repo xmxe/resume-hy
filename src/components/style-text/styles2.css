@@ -1,0 +1,33 @@
+
+
+/**
+ * 好像不太美观~
+ * 
+ * 现在做一些适当调整
+ */
+
+li,.md > p {
+  font-size: 1.3em;
+}
+
+blockquote {
+  margin: 0.1rem 0;
+  border-left: 3px solid #dfe2e5;
+  padding: 0 1px;
+  color: #a69f9f;
+}
+
+.md > p {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.md > p > img {
+  width: 180px;
+  height: 180px;
+  margin: 10px auto;
+}
+
+/**
+ * 如果你觉得我还不错,可以与我联系~
+ */
