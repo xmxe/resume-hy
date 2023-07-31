@@ -1,4 +1,4 @@
-# ![基本信息](static/me.svg)基本信息
+# ![基本信息](assets/me.svg)基本信息
 
  - xmxe/男/1993
  - 150xxxxxxxx
@@ -8,7 +8,7 @@
 
 ---
 
-# ![工作经历&项目经验](static/work.svg)工作经历&项目经验
+# ![工作经历&项目经验](assets/work.svg)工作经历&项目经验
 
 ## 山东华科信息技术有限公司(2018.10~至今)
 
@@ -52,7 +52,7 @@
 
 ---
 
-# ![开源项目&作品](static/github.svg)开源项目&作品
+# ![开源项目&作品](assets/github.svg)开源项目&作品
 
 ## 开源项目
 
@@ -72,14 +72,14 @@
 
 ## 作品
 
-![小程序](static/xcx.png)
-![博客](static/xmxe.gitee.io_blog.png)
-![github](static/github.com_xmxe.png)
-![gitee](static/gitee.com_xmxe.png)
+![小程序](assets/xcx.png)
+![博客](assets/xmxe.gitee.io_blog.png)
+![github](assets/github.com_xmxe.png)
+![gitee](assets/gitee.com_xmxe.png)
 
 ---
 
-# ![专业技能](static/code.svg)专业技能
+# ![专业技能](assets/code.svg)专业技能
 
 - 有着扎实的Java编程基础，熟悉JAVAEE相关技术，能够掌握面向对象的编程及开发。
 - 熟悉HTML、CSS、JavaScript等前端技术，了解前端主流框架及微信小程序。
@@ -91,7 +91,7 @@
 
 ---
 
-# ![自我评价](static/q.svg)自我评价
+# ![自我评价](assets/q.svg)自我评价
 
 - 有良好的代码风格，注重代码质量，具备良好的代码编程习惯及文档编写能力，善于利用工具和代码减少重复性劳动，能进行技术攻关，突破关键技术瓶颈。热爱开源、学习，在[GitHub](https://github.com/xmxe)上有开源项目20多个并获得star。
 - 感谢您花时间阅读我的简历，期待能有机会和您共事。

@@ -1,114 +1,95 @@
 <template>
-  <pre id="work-text" :class="workCls" v-show="show">
-    <div v-if="preview" v-html="text"></div><div style="position: absolute;width: 99%;" v-else>
-      <div class="text" v-html="workText" v-show="!showMd"></div>
-      <div class="md" v-html="mdText" v-show="showMd"></div>
-      <keep-alive>
+  <pre v-show="show" id="work-text" ref="el" :class="workCls">
+    <div v-if="preview" v-html="text"></div><div v-else style="position: absolute;width: 99%;">
+      <div v-show="!showMd" class="text" v-html="workTxt"></div>
+      <div v-show="showMd" class="md" v-html="mdText"></div>
+      <!-- <keep-alive> 
         <transition>
-          <component :is="animation" class="compCls" @click.native="changeAnimation" v-show="showMd"></component>
+          <component :is="currentComponent" v-show="showMd" class="compCls" @click="switchComponent"></component>
         </transition>
-      </keep-alive>
+      </keep-alive> -->
     </div>
   </pre>
 </template>
 
-<script>
-import { writeMixin } from 'common/js/mixin'
+<script setup>
+import { ref, nextTick } from 'vue'
+import { useMixin } from '@/common/js/mixin'
 import Promise from 'bluebird'
-import workText from './work.txt'
+import workTxt from './work.txt?raw'
 import wheel from 'mouse-wheel'
-import marked from 'marked'
+import { marked } from 'marked'
 // import Markdown from 'markdown'
 // const toHTML = Markdown.markdown.toHTML
 
-let components = {}
-let animationArrays = []
-// 参数1:要搜索的文件夹目录 参数2:是否搜索它的子目录 参数3:匹配文件的正则表达式。
-const fieldsComponents = require.context('@/components/animation', true, /\.vue$/)
-fieldsComponents.keys().forEach(element => {
-  // 组件实例
-  const com = fieldsComponents(element)
-  // 截取路径作为组件名
-  const comName = com.default.name
-  animationArrays.push(comName)
-  // 截取组件去扩展名后, 添加到组件对象
-  components[comName] = com.default || com
+const { writeTo, text } = useMixin()
+const el = ref(null)
+
+const flipped = ref(false) // true为翻转后的markdown格式并加上'class=flipped'  false为翻转前的markdown源码格式
+const preview = ref(true)// true为左侧简历还没有开始展示  false为左侧简历开始展示了
+const show = ref(false) // 同preview
+const showMd = ref(true)
+const mdText = marked(workTxt)
+
+const workCls = computed(() => {
+  return flipped.value ? 'flipped' : ''
 })
 
-export default {
-  name: 'work-text',
-  mixins: [writeMixin],
-  components: components,
-  data() {
-    return {
-      flipped: false, // true为翻转后的markdown格式并加上'class=flipped'  false为翻转前的markdown源码格式
-      preview: true, // true为左侧简历还没有开始展示  false为左侧简历开始展示了
-      show: false, // 同preview
-      showMd: true,
-      workText: workText,
-      mdText: marked(workText),
-      animation: 'biker',
-      animationArrays: animationArrays
-    }
-  },
-  computed: {
-    workCls() {
-      return this.flipped ? 'flipped' : ''
-    }
-  },
-  methods: {
-    async write() {
-      this.show = true
-      await this.writeTo(this.$el, workText, 0, false, 1)
-    },
-    showWorkBox() {
-      this.show = true
-      this.preview = false
-      this.flipped = true
-      // 当数据更新了，在dom中渲染后，⾃动执⾏该函数
-      this.$nextTick(() => {
-        this.$el.scrollTop = 9999
-        // 是否正在翻转
-        let flipping = false
-        // 滑动事件
-        wheel(this.$el, async function (dx, dy) {
-          if (flipping) {
-            return
-          }
-          // clienthight:693 scrollTop:text 856  md 2318 scrollHeight:text 1550 md 3018
-          // let half = (this.$el.scrollHeight - this.$el.clientHeight) / 10
-          // let pastHalf = this.flipped ? this.$el.scrollTop < half : this.$el.scrollTop < half
-
-          let pastHalf = this.flipped ? this.$el.scrollTop <= 0 : this.$el.scrollTop + this.$el.clientHeight >= this.$el.scrollHeight - 10
-          // debugger
-          if (pastHalf) {
-            this.showMd = !this.showMd
-            this.flipped = !this.flipped
-            flipping = true
-            await Promise.delay(500)
-            this.$el.scrollTop = this.flipped ? 9999 : 0
-            flipping = false
-          }
-
-          this.$el.scrollTop += (dy * (this.flipped ? -1 : 1))
-        }.bind(this), true)
-      })
-    },
-    changeAnimation() {
-      const length = this.animationArrays.length
-      // 顺序获取动画
-      // 获取数组元素下标 方法1
-      // let i = this.animationArrays.map(item => item).indexOf(this.animation)
-      // 获取数组元素下标 方法2
-      let i = (this.animationArrays || []).findIndex(item => item === this.animation)
-      i++
-      this.animation = this.animationArrays[i === length ? 0 : i]
-
-      // 随机获取动画
-      // this.animation = this.animationArrays[Math.floor(Math.random() * length)]
-    }
-  }
+const write = async function () {
+  show.value = true
+  await writeTo(el.value, workTxt, 0, false, 1)
 }
+const showWorkBox = function () {
+  show.value = true
+  preview.value = false
+  flipped.value = true
+  // 当数据更新了，在dom中渲染后，⾃动执⾏该函数
+  nextTick(() => {
+    el.value.scrollTop = 9999
+    // 是否正在翻转
+    let flipping = false
+    // 滑动事件
+    wheel(el.value, async function (dx, dy) {
+      if (flipping) {
+        return
+      }
+      // clienthight:693 scrollTop:text 856  md 2318 scrollHeight:text 1550 md 3018
+      // let half = (this.$el.scrollHeight - this.$el.clientHeight) / 10
+      // let pastHalf = this.flipped ? this.$el.scrollTop < half : this.$el.scrollTop < half
+
+      let pastHalf = flipped.value ? el.value.scrollTop <= 0 : el.value.scrollTop + el.value.clientHeight >= el.value.scrollHeight - 10
+      // debugger
+      if (pastHalf) {
+        showMd.value = !showMd.value
+        flipped.value = !flipped.value
+        flipping = true
+        await Promise.delay(500)
+        el.value.scrollTop = flipped.value ? 9999 : 0
+        flipping = false
+      }
+
+      el.value.scrollTop += (dy * (flipped.value ? -1 : 1))
+    }.bind(this), true)
+  })
+}
+
+// const currentComponentIndex = ref(0)
+// const components = import.meta.glob('../animation/**/*.vue')
+// const componentKeys = Object.keys(components)
+// // 只保留组件对象
+// const componentObjects = componentKeys.map((key) => components[key])
+// // 计算属性，动态获取当前展示的组件
+// const currentComponent = computed(() => componentObjects[currentComponentIndex.value])
+// const switchComponent = () => {
+//   currentComponentIndex.value = (currentComponentIndex.value + 1) % componentObjects.length
+// }
+// debugger
+
+defineExpose({
+  write,
+  showWorkBox
+})
+
 </script>
 <style lang="stylus" scoped>
   .compCls

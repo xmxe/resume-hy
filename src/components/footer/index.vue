@@ -1,15 +1,17 @@
 <template>
   <footer>
-    <a href="javascript:;" v-show="!isEnd" :title="speedTips" @click.prevent="toggleSpeed" v-html="speedSvg"></a>
-    <a href="javascript:;" v-show="!isEnd" :title="pauseTips" @click.prevent="togglePause" v-html="pauseSvg"></a>
-    <a href="javascript:;" v-show="!isEnd" title="跳过" @click.prevent="skip">
+    <a v-show="!isEnd" href="javascript:;" :title="speedTipsComputed" @click.prevent="toggleSpeedInjected"
+      v-html="speedSvgComputed"></a>
+    <a v-show="!isEnd" href="javascript:;" :title="pauseTipsComputed" @click.prevent="togglePauseInject"
+      v-html="pauseSvgComputed"></a>
+    <a v-show="!isEnd" href="javascript:;" title="跳过" @click.prevent="skipInject">
       <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M4 40.8361C8.89307 34.8632 13.2383 31.4739 17.0356 30.6682C20.8329 29.8625 24.4483 29.7408 27.8818 30.303V41L44 23.5453L27.8818 7V17.167C21.5333 17.2172 16.1362 19.4948 11.6905 24C7.24474 28.5052 4.68126 34.1172 4 40.8361Z"
           fill="#878787" stroke="#878787" stroke-width="3" stroke-linejoin="round" />
       </svg>
     </a>
-    <a href="https://github.com/xmxe" title="GitHub" :target="target" v-show="isEnd">
+    <a v-show="isEnd" href="https://github.com/xmxe" title="GitHub" :target="target">
       <svg width="22" height="22" class="icon" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
         <path fill-rule="evenodd"
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
@@ -17,7 +19,7 @@
         </path>
       </svg>
     </a>
-    <a href="https://gitee.com/xmxe" title="码云" :target="target" v-show="isEnd">
+    <a v-show="isEnd" href="https://gitee.com/xmxe" title="码云" :target="target">
       <svg width="22" height="21" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
         p-id="991" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path
@@ -26,14 +28,14 @@
         </path>
       </svg>
     </a>
-    <a href="https://xmxe.gitee.io/blog" title="博客" :target="target" v-show="isEnd">
+    <a v-show="isEnd" href="https://xmxe.gitee.io/blog" title="博客" :target="target">
       <svg width="22" height="22" class="icon" viewBox="0 0 480 542" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"
           fill="#878787" />
       </svg>
     </a>
-    <a href="javascript:;" title="微信" v-show="isEnd" @mouseenter="qrcodeShow = !qrcodeShow"
+    <a v-show="isEnd" href="javascript:;" title="微信" @mouseenter="qrcodeShow = !qrcodeShow"
       @mouseleave="qrcodeShow = !qrcodeShow">
       <svg width="24" height="24" class="icon" viewBox="0 0 340 195" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -42,14 +44,20 @@
         </path>
         <path
           d="M235.306619,262.960691 C222.002154,262.960691 213.455848,260.57231 201.816827,256.661677 C198.831688,255.793897 188.962153,260.777254 172.208221,271.611748 C170.97371,272.22492 169.729337,272.111798 168.475102,271.272381 C167.220866,270.432965 166.886856,269.152813 167.473073,267.431926 C171.980492,252.744618 173.261759,244.592583 171.316875,242.975819 C147.527539,227.425339 134,205.239236 134,177.980345 C134,131.046997 179.356518,93 235.306619,93 C291.256719,93 336.613237,131.046997 336.613237,177.980345 C336.613237,224.913694 291.256719,262.960691 235.306619,262.960691 Z M201.816827,165.003051 C209.677585,165.003051 216.049989,158.630648 216.049989,150.76989 C216.049989,142.909132 209.677585,136.536729 201.816827,136.536729 C193.956069,136.536729 187.583666,142.909132 187.583666,150.76989 C187.583666,158.630648 193.956069,165.003051 201.816827,165.003051 Z M269.633655,165.003051 C277.494413,165.003051 283.866816,158.630648 283.866816,150.76989 C283.866816,142.909132 277.494413,136.536729 269.633655,136.536729 C261.772897,136.536729 255.400493,142.909132 255.400493,150.76989 C255.400493,158.630648 261.772897,165.003051 269.633655,165.003051 Z"
-          fill="#878787" transform="translate(235.306619, 182.500000) scale(-1, 1) translate(-235.306619, -182.500000) "></path>
+          fill="#878787" transform="translate(235.306619, 182.500000) scale(-1, 1) translate(-235.306619, -182.500000) ">
+        </path>
       </svg>
     </a>
-    <img class="qrcode" src="static/xcx.png" v-show="qrcodeShow">
+    <img v-show="qrcodeShow" class="qrcode" src="/assets/xcx.png">
   </footer>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
+import { footerStore } from '@/store/footer';
+
+const store = footerStore()
+
 const debug = process.env.NODE_ENV !== 'production'
 
 const STATE_RUNNING = 0
@@ -67,49 +75,45 @@ const pauseSvg = [
 ]
 const pauseTips = ['暂停', '继续']
 
-export default {
-  name: 'v-footer',
-  data() {
-    return {
-      state: STATE_RUNNING,
-      state_speed: debug ? STATE_RUNNING : STATE_PAUSED,
-      isEnd: false,
-      target: '_blank',
-      qrcodeShow: false
-    }
-  },
-  computed: {
-    speedSvg() {
-      return speedSvg[this.state_speed]
-    },
-    speedTips() {
-      return speedTips[this.state_speed]
-    },
-    pauseSvg() {
-      return pauseSvg[this.state]
-    },
-    pauseTips() {
-      return pauseTips[this.state]
-    }
-  },
-  methods: {
-    toggleSpeed() {
-      this.state_speed = this.state_speed === STATE_RUNNING ? STATE_PAUSED : STATE_RUNNING
-      this.$store.commit('toggleSpeed')
-    },
-    togglePause() {
-      this.state = this.state === STATE_RUNNING ? STATE_PAUSED : STATE_RUNNING
-      this.$root.$emit('togglePause', this.state)
-    },
-    skip() {
-      this.$root.$emit('skip')
-      this.$root.$emit('togglePause', STATE_RUNNING)
-    },
-    end() {
-      this.isEnd = true
-    }
-  }
+const target = '_blank'
+const state = ref(STATE_RUNNING)
+const state_speed = debug ? ref(STATE_RUNNING) : ref(STATE_PAUSED)
+const isEnd = ref(false)
+const qrcodeShow = ref(false)
+
+const speedSvgComputed = computed(() => {
+  return speedSvg[state_speed.value]
+})
+const speedTipsComputed = computed(() => {
+  return speedTips[state_speed.value]
+})
+
+const pauseSvgComputed = computed(() => {
+  return pauseSvg[state.value]
+})
+const pauseTipsComputed = computed(() => {
+  return pauseTips[state.value]
+})
+
+const toggleSpeedInjected = () => {
+  state_speed.value = state_speed.value === STATE_RUNNING ? STATE_PAUSED : STATE_RUNNING
+  store.changeSpeed()
 }
+const togglePauseInject = () => {
+  state.value = state.value === STATE_RUNNING ? STATE_PAUSED : STATE_RUNNING
+  store.changePaused()
+}
+const skipInject = () => {
+  store.changeAnimationSkipped()
+}
+const end = () => {
+  isEnd.value = !isEnd.value
+}
+
+defineExpose({
+  end
+})
+
 </script>
 
 <style lang="stylus">
@@ -159,3 +163,4 @@ export default {
         transform-origin: 40% 70%
 
 </style>
+@/store/speed@/store/footer
