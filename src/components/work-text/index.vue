@@ -3,11 +3,11 @@
     <div v-if="preview" v-html="text"></div><div v-else style="position: absolute;width: 99%;">
       <div v-show="!showMd" class="text" v-html="workTxt"></div>
       <div v-show="showMd" class="md" v-html="mdText"></div>
-      <!-- <keep-alive> 
+      <!-- <keep-alive> -->
         <transition>
           <component :is="currentComponent" v-show="showMd" class="compCls" @click="switchComponent"></component>
         </transition>
-      </keep-alive> -->
+      <!-- </keep-alive> -->
     </div>
   </pre>
 </template>
@@ -73,17 +73,27 @@ const showWorkBox = function () {
   })
 }
 
-// const currentComponentIndex = ref(0)
-// const components = import.meta.glob('../animation/**/*.vue')
-// const componentKeys = Object.keys(components)
-// // 只保留组件对象
-// const componentObjects = componentKeys.map((key) => components[key])
-// // 计算属性，动态获取当前展示的组件
-// const currentComponent = computed(() => componentObjects[currentComponentIndex.value])
-// const switchComponent = () => {
-//   currentComponentIndex.value = (currentComponentIndex.value + 1) % componentObjects.length
-// }
-// debugger
+const { components, animationArrays} = animationComponent()
+const currentComponentIndex = ref(0)
+// 计算属性，动态获取当前展示的组件
+const currentComponent = computed(() => components[animationArrays[currentComponentIndex.value]])
+const switchComponent = () => {
+  currentComponentIndex.value = (currentComponentIndex.value + 1) % animationArrays.length
+}
+function animationComponent() {
+  const components = {}
+  const animationArrays = []
+  const fieldsComponents = import.meta.glob('../animation/**/*.vue')
+  for (const path in fieldsComponents) {
+    fieldsComponents[path]().then((com) => {
+      const comName = com.default.name
+      animationArrays.push(comName)
+      // 截取组件去扩展名后, 添加到组件对象
+      components[comName] = com.default || com
+    })
+  }
+  return { components, animationArrays };
+}
 
 defineExpose({
   write,
