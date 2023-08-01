@@ -115,7 +115,7 @@ export default {
 <style lang="stylus">
   footer
     position: absolute
-    bottom: 0
+    bottom: 15px
     left: 50%
     transform: translate3d(-50%, 50%, 0)
     .icon

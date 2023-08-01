@@ -1,6 +1,6 @@
 /**
  * 你好,我叫zhengfl.想找一份高级工程师或架构师的工作
- * 我喜欢研究一些有趣的技术,这个就是从https://github.com/ustbhuangyi/resume fork而来
+ * 我喜欢研究一些有趣的技术,此项目基于Vue2实现,Vue3版本地址https://github.com/xmxe/zhengfl/tree/vue3
  */
 
 /**
@@ -33,7 +33,6 @@ pre {
   color: #d5cece;
 }
 
-
 /**
  * 看上去好多了,但是在整个屏幕上写代码有点浪费空间了
  */
@@ -56,7 +55,7 @@ pre:not(:empty) {
 #style-text {
   transform: translateX(98%) rotateY(-10deg);
   transform-origin: right;
-  max-height: 95.5%;
+  max-height: 93%;
 }
 
 pre:not(#style-text) {
