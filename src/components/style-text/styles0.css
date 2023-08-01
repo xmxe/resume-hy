@@ -1,6 +1,6 @@
 /**
  * 你好,我叫zhengfl.想找一份高级工程师或架构师的工作
- * 我喜欢研究一些有趣的技术,这个就是从https://github.com/ustbhuangyi/resume fork而来
+ * 我喜欢研究一些有趣的技术,此项目基于Vue3实现,Vue2版本地址https://github.com/xmxe/zhengfl
  */
 
 /**
@@ -32,7 +32,6 @@ html {
 pre {
   color: #d5cece;
 }
-
 
 /**
  * 看上去好多了,但是在整个屏幕上写代码有点浪费空间了
