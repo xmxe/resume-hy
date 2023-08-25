@@ -1,6 +1,6 @@
 #work-text {
-  width: 99%;
-  animation: md 3s infinite;
+  width: 100%;
+  /**animation: md 3s infinite;**/
 }
   
 #style-text {
