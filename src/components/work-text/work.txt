@@ -1,4 +1,4 @@
-# ![基本信息](static/me.svg)基本信息
+# ![基本信息](static/dynamic/me.svg)基本信息
 
  - xmxe/男/1993
  - 150xxxxxxxx
@@ -8,7 +8,7 @@
 
 ---
 
-# ![工作经历&项目经验](static/work.svg)工作经历&项目经验
+# ![工作经历&项目经验](static/dynamic/work.svg)工作经历&项目经验
 
 ## xxxx有限公司(2018.10~至今)
 
@@ -27,7 +27,7 @@
 - 进行国网省公司调控云(基于Dubbo的云服务)服务端接口开发，调控云提供注册方式，编写接口后将接口以服务的方式注册到调控云集群供客户端调用业务数据。
 - 运维大数据集群部分调度任务，将50帧PMU的数据写入到Kafka并启动Spark任务。
 - 在调度系统中增加Java调用Python的功能(`java.lang.Runtime`实现)，后期使用开源调度框架XXL-JOB来运行部分调度任务及Python算法。
-- 针对部分接口没有提供Python版本SDK，增加Python调用Java功能(Jpype库实现)。
+- 针对部分接口没有提供Python版本SDK，增加Python调用Java功能(`Jpype`库实现)。
 
 ## xxxx有限公司(2015.9~2018.10)
 
@@ -52,34 +52,35 @@
 
 ---
 
-# ![开源项目&作品](static/github.svg)开源项目&作品
+# ![开源项目&作品](static/dynamic/github.svg)开源项目&作品
 
 ## 开源项目
 
-- [blog](https://gitee.com/xmxe/blog): 使用Hexo+Matery主题搭建的个人博客。
-- [jwt](https://github.com/xmxe/jwt): 使用JWT替代Cookie及Session认证，结合Spring Security实现鉴别、授权。
-- [oauth2](https://github.com/xmxe/oauth2): 第三方授权登录，如使用GitHub账号登录第三方网站。
-- [springboot](https://github.com/xmxe/springboot): 将主流技术集成到Spring Boot，如Sa-Token,Shiro,CAS单点登陆,Jasypt,Sharding-jdbc,WebSocket等。
-- [springcloud](https://github.com/xmxe/springcloud): 测试主流微服务组件及新生组件，如Apache ShenYu,Spring Cloud Netflix, Spring Cloud Alibaba,Spring Cloud Tencent等。
+> - [blog](https://gitee.com/xmxe/blog): 使用Hexo+Matery主题搭建的个人博客。
+> - [jwt](https://github.com/xmxe/jwt): 使用JWT替代Cookie及Session认证，结合Spring Security实现鉴别、授权。
+> - [oauth2](https://github.com/xmxe/oauth2): 第三方授权登录，如使用GitHub账号登录第三方网站。
+> - [springboot](https://github.com/xmxe/springboot): 将主流技术集成到Spring Boot，如Sa-Token,Shiro,CAS单点登陆,Jasypt,Sharding-jdbc,WebSocket等。
+> - [springcloud](https://github.com/xmxe/springcloud): 测试主流微服务组件及新生组件，如Apache ShenYu,Spring Cloud Netflix, Spring Cloud Alibaba,Spring Cloud Tencent等。
 
 
 ## 技术文章
 
-- [JVM知识点](https://xmxe.gitee.io/blog/posts/be5a099f7894/)
-- [Spring相关](https://xmxe.gitee.io/blog/posts/e47eee220e74/)
-- [ElasticSearch详解](https://xmxe.gitee.io/blog/posts/38f9e76ec464/)
-- [常见的限流算法](https://xmxe.gitee.io/blog/posts/f55fdb8ec84c/)
+> - [JVM知识点](https://xmxe.gitee.io/blog/posts/be5a099f7894/)
+> - [Spring相关](https://xmxe.gitee.io/blog/posts/e47eee220e74/)
+> - [Spring中的Bean对象](https://xmxe.gitee.io/blog/posts/b435885d7cf1/)
+> - [ElasticSearch详解](https://xmxe.gitee.io/blog/posts/38f9e76ec464/)
+> - [常见的限流算法](https://xmxe.gitee.io/blog/posts/f55fdb8ec84c/)
 
 ## 作品
 
-![小程序](static/xcx.png)
-![博客](static/xmxe.gitee.io_blog.png)
-![github](static/github.com_xmxe.png)
-![gitee](static/gitee.com_xmxe.png)
+![小程序](static/dynamic/xcx.png)
+![博客](static/dynamic/xmxe.gitee.io_blog.png)
+![github](static/dynamic/github.com_xmxe.png)
+![gitee](static/dynamic/gitee.com_xmxe.png)
 
 ---
 
-# ![专业技能](static/code.svg)专业技能
+# ![专业技能](static/dynamic/code.svg)专业技能
 
 - 有着扎实的Java编程基础，熟悉JAVAEE相关技术，能够掌握面向对象的编程及开发。
 - 熟悉HTML、CSS、JavaScript等前端技术，了解前端主流框架及微信小程序。
@@ -91,7 +92,7 @@
 
 ---
 
-# ![自我评价](static/q.svg)自我评价
+# ![自我评价](static/dynamic/q.svg)自我评价
 
 - 有良好的代码风格，注重代码质量，具备良好的代码编程习惯及文档编写能力，善于利用工具和代码减少重复性劳动，能进行技术攻关，突破关键技术瓶颈。热爱开源、学习，在[GitHub](https://github.com/xmxe)上有开源项目20多个并获得star。
 - 感谢您花时间阅读我的简历，期待能有机会和您共事。
