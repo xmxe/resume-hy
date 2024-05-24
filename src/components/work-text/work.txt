@@ -67,11 +67,11 @@
 
 ## 技术文章
 
-> - [JVM知识点](https://xmxe.gitee.io/blog/posts/be5a099f7894/)
-> - [Spring相关](https://xmxe.gitee.io/blog/posts/e47eee220e74/)
-> - [Spring中的Bean对象](https://xmxe.gitee.io/blog/posts/b435885d7cf1/)
-> - [ElasticSearch详解](https://xmxe.gitee.io/blog/posts/38f9e76ec464/)
-> - [常见的限流算法](https://xmxe.gitee.io/blog/posts/f55fdb8ec84c/)
+> - [JVM知识点](https://xmxe.github.io/blog/posts/be5a099f7894/)
+> - [Spring相关](https://xmxe.github.io/blog/posts/e47eee220e74/)
+> - [Spring中的Bean对象](https://xmxe.github.io/blog/posts/b435885d7cf1/)
+> - [ElasticSearch详解](https://xmxe.github.io/blog/posts/38f9e76ec464/)
+> - [常见的限流算法](https://xmxe.github.io/blog/posts/f55fdb8ec84c/)
 
 ## 作品
 
