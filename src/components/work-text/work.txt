@@ -14,7 +14,7 @@
 
 ### 职责
 
-> - **负责项目验收技术相关的整体工作。**
+> - **负责项目验收、上线相关的整体工作**
 > - **负责项目软件架构、总体设计、需求分析设计。**
 > - **对客户提出的开发需求进行可行性评估和风险评估，并制定相应开发计划。**
 > - **负责技术文档的编写及维护，定期Review代码，参与需求分析、可研、概设详设、文档编写、项目实施、系统维护等工作。**
@@ -22,7 +22,8 @@
 
 ### 成果
 
-- 通过协调与沟通，进行项目上线相关事宜的工作。如申请ECS资源，堡垒机，开通防火墙、隔离装置等。最高效率、最大成效完成项目相关的准备工作。
+- 协调与沟通项目上线相关事宜的工作。最高效率、最大成效完成项目验收相关工作。
+- 主导完成了应用程序在爱山东APP上架的工作。
 - 爬虫电厂所在地天气预报数据，使用HttpClient+JSoup对中央气象网历史天气、未来天气的数据进行抓取。
 - 采用Nginx+Keepalived搭建HA服务，Nginx实现了应用的反向代理、负载均衡、跨域协作，Keepalived对Nginx进行心跳检测，使用主从架构保证了服务的稳定运行。
 - 搭建持续集成服务Jenkins，编写Ant脚本对项目进行编译、打包，优化了部署流程，提高了部署效率。
@@ -67,16 +68,16 @@
 
 ## 技术文章
 
-> - [JVM知识点](https://xmxe.github.io/blog/posts/be5a099f7894/)
-> - [Spring相关](https://xmxe.github.io/blog/posts/e47eee220e74/)
-> - [Spring中的Bean对象](https://xmxe.github.io/blog/posts/b435885d7cf1/)
-> - [ElasticSearch详解](https://xmxe.github.io/blog/posts/38f9e76ec464/)
-> - [常见的限流算法](https://xmxe.github.io/blog/posts/f55fdb8ec84c/)
+> - [JVM知识点](https://blog-aok.pages.dev/posts/be5a099f7894/)
+> - [Spring相关](https://blog-aok.pages.dev/posts/e47eee220e74/)
+> - [Spring中的Bean对象](https://blog-aok.pages.dev/posts/b435885d7cf1/)
+> - [ElasticSearch详解](https://blog-aok.pages.dev/posts/38f9e76ec464/)
+> - [常见的限流算法](https://blog-aok.pages.dev/posts/f55fdb8ec84c/)
 
 ## 作品
 
 ![小程序](static/dynamic/xcx.png)
-![博客](static/dynamic/xmxe.gitee.io_blog.png)
+![博客](static/dynamic/qrcode_blog.png)
 ![github](static/dynamic/github.com_xmxe.png)
 ![gitee](static/dynamic/gitee.com_xmxe.png)
 
@@ -97,5 +98,5 @@
 
 # ![自我评价](static/dynamic/q.svg)自我评价
 
-- 有良好的代码风格，注重代码质量，具备良好的代码编程习惯及文档编写能力，善于利用工具和代码减少重复性劳动，能进行技术攻关，突破关键技术瓶颈。热爱开源、学习，在[GitHub](https://github.com/xmxe)上有开源项目20多个并获得star。
+- 有良好的代码风格，注重代码质量，具备良好的代码编程习惯及文档编写能力，善于利用工具和代码减少重复性劳动，能进行技术攻关，突破关键技术瓶颈。热爱开源、学习，在[GitHub](https://github.com/xmxe)上有开源项目并获得star。
 - 希望能以有限的经验为贵司带来更多的价值。感谢您花时间阅读我的简历，期待能有机会和您共事。
