@@ -55,19 +55,17 @@
 ## 开源项目
 
 > - **[blog](https://gitee.com/xmxe/blog): 使用Hexo+Matery主题搭建的个人博客。**
-> - **[jwt](https://github.com/xmxe/jwt): 使用JWT替代Cookie及Session认证，结合Spring Security实现鉴别、授权。**
 > - **[oauth2](https://github.com/xmxe/oauth2): 第三方授权登录，如使用GitHub账号登录第三方网站。**
 > - **[springboot](https://github.com/xmxe/springboot): 将主流技术集成到Spring Boot，如Sa-Token,Shiro,CAS单点登陆,Jasypt,Sharding-jdbc,WebSocket等。**
 > - **[springcloud](https://github.com/xmxe/springcloud): 测试主流微服务组件及新生组件，如Apache ShenYu,Spring Cloud Netflix, Spring Cloud Alibaba,Spring Cloud Tencent等。**
 
 
-## 技术文章
+## 我的博客
 
 > - **[JVM知识点](https://blog-aok.pages.dev/posts/be5a099f7894/)**
-> - **[Spring相关](https://blog-aok.pages.dev/posts/e47eee220e74/)**
 > - **[Spring中的Bean对象](https://blog-aok.pages.dev/posts/b435885d7cf1/)**
-> - **[ElasticSearch详解](https://blog-aok.pages.dev/posts/38f9e76ec464/)**
-> - **[常见的限流算法](https://blog-aok.pages.dev/posts/f55fdb8ec84c/)**
+> - **[消息队列技术选型](https://blog-aok.pages.dev/posts/69be9f826425/)**
+> - **[Keepalived+Nginx高可用](https://blog-aok.pages.dev/posts/ad742aa7ce3a/)**
 
 ## 作品
 
